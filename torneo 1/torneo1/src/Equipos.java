@@ -1,9 +1,16 @@
 public class Equipos {
-    static int integrantes;
-    static String Capitan;
-    static String Subcapitan;
-    static String[] Nombre = new String[32];
-    static String Comodines;
-    static int maximoequipos = 32;
-    static int minimoequipos = 16;
+     int[] integrantes;
+     String[] Capitan;
+     String[] Subcapitan;
+     String[] NombreEquipos = new String[16];
+     String[] Comodines;
+     Boolean Eliminado;
+     int integrantesMaximos = 14;
+     int integrantesMinimos = 9;
+
+    public Equipos(){
+
+    }
+
+    
 }
