@@ -1,7 +1,34 @@
 public class fech {
-    
+    public void fixture(){
 
-public void fixture(){
-    System.out.println("Proximamente");
-}
-}
+    
+    int j = 0 ;
+    System.out.println("╔═════════╦═══════╦════════╗");
+    System.out.println("║ Equipos ║ Goles ║ Puntos ║");
+    System.out.println("╚═════════╩═══════╩════════╝");
+    System.out.println("                                        ╔═════════╦═══════╗");
+    System.out.println("╔══════════════════════════╗");
+    System.out.println("║         Grupo  A         ║            ╚═════════╩═══════╝");
+    System.out.println("╠═════════╦═══════╦════════╣");
+    System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╔═════════╦═══════╗");
+    System.out.println(  "╠═════════╬═══════╬════════╣"    +     "            ║  "+j+"      ║     "+j+" ║");
+    System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╠═════════╬═══════╣");
+    System.out.println(  "╠═════════╬═══════╬════════╣"    +     "            ║  "+j+"      ║     "+j+" ║");
+    System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╚═════════╩═══════╝");
+    System.out.println("╠═════════╬═══════╬════════╣");
+    System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║");
+    System.out.println("╚═════════╩═══════╩════════╝");//1
+    System.out.println("");
+    System.out.println("");
+    System.out.println("╔══════════════════════════╗");
+    System.out.println("║         Grupo  B         ║");
+    System.out.println("╠═════════╦═══════╦════════╣");
+    System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╔═════════╦═══════╦════════╗");
+    System.out.println(  "╠═════════╬═══════╬════════╣"    +     "            ║  "+j+"      ║     "+j+" ║      "+j+" ║");
+    System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╠═════════╬═══════╬════════╣");
+    System.out.println(  "╠═════════╬═══════╬════════╣"    +     "            ║  "+j+"      ║     "+j+" ║      "+j+" ║");
+    System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╚═════════╩═══════╩════════╝");
+    System.out.println("╠═════════╬═══════╬════════╣");
+    System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║");
+    System.out.println("╚═════════╩═══════╩════════╝");//2
+}}
