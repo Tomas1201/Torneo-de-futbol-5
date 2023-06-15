@@ -7,8 +7,8 @@ public class prueba {
    
     
 
-public void pruena(List<Equipos> Equipos){
-for(Equipos equipos : Equipos){
+//public void pruena(List<Equipos> Equipos){
+//for(Equipos equipos : Equipos){
 
+//}}
 }
-    }}
