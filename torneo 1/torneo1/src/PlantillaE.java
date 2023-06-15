@@ -1,5 +1,6 @@
 public class PlantillaE {
     static String hola;
+    Jugadores juga = new Jugadores();
     public void plantillae(){
          
     System.out.println("------------------------------------------");
@@ -8,5 +9,8 @@ public class PlantillaE {
     System.out.println("");
     System.out.println("");
     System.out.println("");
-    }
-}
+    }}
+    
+
+    
+   
