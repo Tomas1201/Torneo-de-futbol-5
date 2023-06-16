@@ -1,7 +1,7 @@
 
-public class fech {
+public class fech16 {
     
- public void fixture(){
+    public void fixture(){
 
     
     int j = 0 ;
@@ -23,7 +23,7 @@ public class fech {
     System.out.println("                                                                        ║  "+j+"      ║     "+j+" ║");
     System.out.println("                                                                        ╠═════════╬═══════╣");
     System.out.println("                                                                        ║  "+j+"      ║     "+j+" ║");
-    System.out.println("╔══════════════════════════╗                                            ╚═════════╩═══════╝");
+    System.out.println("╔══════════════════════════╗                                             ╚═════════╩═══════╝");
     System.out.println("║         Grupo  B         ║");
     System.out.println("╠═════════╦═══════╦════════╣");
     System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╔═════════╦═══════╗");
@@ -33,11 +33,11 @@ public class fech {
     System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╚═════════╩═══════╝");
     System.out.println("╠═════════╬═══════╬════════╣");
     System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║");
-    System.out.println("╚═════════╩═══════╩════════╝                                                                            ");
-    System.out.println("                                                                                                        ");
-    System.out.println("                                                                                                        ");
-    System.out.println("                                                                                                        ");
-    System.out.println("╔══════════════════════════╗                                                                            ");
+    System.out.println("╚═════════╩═══════╩════════╝");
+    System.out.println("");
+    System.out.println("");
+    System.out.println("");
+    System.out.println("╔══════════════════════════╗");
     System.out.println("║         Grupo  C         ║");
     System.out.println("╠═════════╦═══════╦════════╣");
     System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╔═════════╦═══════╗");
@@ -51,7 +51,7 @@ public class fech {
     System.out.println("                                                                        ║  "+j+"      ║     "+j+" ║");
     System.out.println("                                                                        ╠═════════╬═══════╣");
     System.out.println("                                                                        ║  "+j+"      ║     "+j+" ║");
-    System.out.println("╔══════════════════════════╗                                            ╚═════════╩═══════╝");
+    System.out.println("╔══════════════════════════╗                                             ╚═════════╩═══════╝");
     System.out.println("║         Grupo  D         ║");
     System.out.println("╠═════════╦═══════╦════════╣");
     System.out.println(  "║  "+j+"      ║     "+j+" ║      "+j+" ║"   +      "            ╔═════════╦═══════╗");
