@@ -1,9 +1,7 @@
 import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
 
 public class Equipos {
-      private int CantidadJugadores;
+      private byte CantidadJugadores;
       private String Capitan;
       private String Subcapitan;
       private String NombreEquipo;
@@ -19,8 +17,8 @@ public class Equipos {
 
      //static Jugadores Juga = new Jugadores();
      static Scanner sc = new Scanner(System.in);
-     private List<Jugadores> Jugadores = new ArrayList<>();
-    
+     
+    Jugadores[] jugadores2 = new Jugadores[CantidadJugadores];
 
 
     //Setter y Getter para InsJuga
@@ -33,11 +31,11 @@ public class Equipos {
         }
 
     // Setter y Getter para cantidadJugadores
-    public void setCantidadJugadores(int cantidadJugadores) {
+    public void setCantidadJugadores(byte cantidadJugadores) {
         this.CantidadJugadores = cantidadJugadores;
     }
 
-    public int getCantidadJugadores() {
+    public byte getCantidadJugadores() {
         return CantidadJugadores;
     }
 
@@ -105,28 +103,26 @@ public class Equipos {
     }
 
 //Se ingresan los nombres de los jugadores
-    public void NombreJugador(){
+   
+public void NombreJugador(){
 for(int i =0;i < CantidadJugadores;i++){
-
-Jugadores jugadores = new Jugadores();
-
+jugadores2[i] = new Jugadores();
 System.out.println("Ingrese el nombre del "+(i+1)+" Jugador: ");
-jugadores.setNombreJugador(sc.nextLine()); 
-System.out.println("Ingrese el DNI de "+jugadores.getNombrejugador()+": " );
-        jugadores.setDNI(sc.nextInt());
+jugadores2[i].setNombreJugador(sc.nextLine()); 
+System.out.println("Ingrese el DNI de "+jugadores2[i].getNombrejugador()+": " );
+        jugadores2[i].setDNI(sc.nextInt());
         sc.nextLine();
 System.out.println("Ingrese la posicion del jugador: ");
-        jugadores.setPocision(sc.nextLine());
+        jugadores2[i].setPocision(sc.nextLine());
 
-  Jugadores.add(jugadores);
     }
 
  }
 //Imprime los nombres de los jugadores
 public void Decirnombre(){
-    for(int i = 0; i < CantidadJugadores;i++){
-Jugadores jugadores = Jugadores.get(i);
-System.out.println("El nombre del jugador es: "+jugadores.getNombrejugador());
+    for(int i = 0; i < jugadores2.length;i++){
+
+System.out.println("El nombre del jugador es: "+jugadores2[i].getNombrejugador());
     }
 
 }

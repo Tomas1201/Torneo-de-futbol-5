@@ -1,68 +1,88 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.List;
 public class Inscripcion {
- private List<Equipos> equipos = new ArrayList<>();
+ 
 private byte CantidadEquipos;
  static byte decision = -1;
+ static String Respuesta;
+ static String Respuesta2;
     static Scanner sc = new Scanner(System.in);
     static Equipos equi1 = new Equipos();
     static Jugadores juga = new Jugadores();
-    
-public List<Equipos> getEquipos(){
-    return equipos;
-}
+    private Equipos[] equipos2;
+    static Boolean pi = true;
+    static Boolean euler = true;
+
 public void InscripEquipo(){
     System.out.println("Indique la cantidad de equipos a ingresar: ");
-    CantidadEquipos = sc.nextByte();
+    equipos2 = new Equipos[sc.nextByte()];
     sc.nextLine();
 
-    for(int pepe = 1;pepe <= CantidadEquipos;pepe++){
-        Equipos Equipo = new Equipos();
-        //System.out.println("El equipo que esta por ingresar cuenta con ");
-        System.out.println("Ingrese el nombre del "+(pepe+1)+" Equipo: ");
-            Equipo.setNombreEquipo(sc.nextLine());
-        System.out.println("Ingrese el nombre de del capitan: ");
-            Equipo.setCapitan(sc.nextLine());    
-        System.out.println("Ingrese el nombre del Subcapitan:");
-            Equipo.setSubcapitan(sc.nextLine());   
+    for(int pepe = 0;pepe < equipos2.length;pepe++){
+       equipos2[pepe] = new Equipos();
+        
 
-             while(Equipo.getInsJuga()){
+        System.out.println("Ingrese el nombre del "+(pepe+1)+" Equipo: ");
+        equipos2[pepe].setNombreEquipo(sc.nextLine());
+        System.out.println("Ingrese el nombre de del capitan: ");
+           equipos2[pepe].setCapitan(sc.nextLine());  
+        System.out.println("Ingrese el nombre del Subcapitan:");
+           equipos2[pepe].setSubcapitan(sc.nextLine());
+         
+             while(equipos2[pepe].getInsJuga()){
                 System.out.println("Ingrese la cantidad de jugadores: ");
-                        Equipo.setCantidadJugadores(sc.nextInt()); 
+                    
+                equipos2[pepe].setCantidadJugadores(sc.nextByte());  
                          sc.nextLine();
 
-                if(Equipo.getCantidadJugadores()<= 14 && Equipo.getCantidadJugadores()>= 9){
-
-                    System.out.println("Todos los los jugadores del equipo cuenta con Obra social?");
-                    Equipo.setDocument1(sc.nextBoolean());
-                         if(Equipo.getDocument1()){
-                           
-                        System.out.println("El "+(pepe+1)+ " se registro exitosamente");   
-                                            
-                                Equipo.setInsJuga(false);
-                    sc.nextLine();        
+                if(equipos2[pepe].getCantidadJugadores()<= 14 && equipos2[pepe].getCantidadJugadores()>= 9){
+                    while(pi){
+                        System.out.println("Todos los los jugadores del equipo cuenta con Obra social? (si)(no)");
+                          Respuesta = sc.nextLine();
+                            switch(Respuesta){  
+                                case "si":
+                                equipos2[pepe].setDocument1(true);
+                                System.out.println("El "+(pepe+1)+ " se registro exitosamente");   
+                                pi = false;
+                             break;
+                                case "no":
+                                equipos2[pepe].setDocument1(false);
+                                pi = false;
+                                break;
+                                default:
+                                System.out.println("Su respuesta es invalida");
+                                
+                                break;
+                             }
                             }
-
-                 else{
-                    System.out.println("Lo sentimos pero todos los jugadores deben de contar con Obra social");
-                 }
-                System.out.println("Todos los Jugadores Cuentan con Apto Medico acreditado por un medico?");
-                     Equipo.setDocument2(sc.nextBoolean());
-                        sc.nextLine();
-                        if(Equipo.getDocument2()){
-                                Equipo.NombreJugador();
-                              Equipo.Decirnombre();
-                        }
-                        else{
-                            System.out.println("Lo sentimos pero todos los jugadores deben de contar con Apto medico");
-                        }
-                            
-
+ while(euler){
+                      System.out.println("Todos los Jugadores Cuentan con Apto Medico acreditado por un medico?");
+                     Respuesta2 = sc.nextLine();
+                   
+                     switch(Respuesta2){
+                        case "si":
+                      equipos2[pepe].setDocument2(true);
+                      euler = false;
+                      break;
+                        case "no":
+                        euler = false;
+                        break;
+                        default:
+                        System.out.println("Su respuesta es invalida");
                         
-                  }
-                    
-                 else if(Equipo.getCantidadJugadores() < 9){
+                        break;
+                    }
+                }
+                    if(equipos2[pepe].getDocument1() && equipos2[pepe].getDocument2()){
+                                equipos2[pepe].NombreJugador();
+                              equipos2[pepe].Decirnombre();
+                              equipos2[pepe].setInsJuga(false);
+                    }
+                    else{
+                        System.out.println("Lo sentimos pero todos los jugadores deben de contar la documentacion minima");
+                    }
+                 }
+                   
+else if(equipos2[pepe].getCantidadJugadores() < 9){
                 System.out.println("Su equipo no cumple con la cantidad de jugadores minimo");
                  }
                  else{
@@ -73,13 +93,19 @@ public void InscripEquipo(){
                 switch(decision){
                     case 1:
                     pepe--;
-                    Equipo.setInsJuga(false);
+                    equipos2[pepe].setInsJuga(false);
                     break;
                     case 2:
                     break;
                     case 0:
-                    Equipo.setInsJuga(false);
+                    equipos2[pepe].setInsJuga(false);
                     break;
+
+
+
+                  }
+                    
+                 
                 }
             }}
 
@@ -90,5 +116,4 @@ public void InscripEquipo(){
     
  }
 
-}
 }
