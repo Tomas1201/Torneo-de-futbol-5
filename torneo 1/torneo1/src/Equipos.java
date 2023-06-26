@@ -18,6 +18,7 @@ public class Equipos {
     // Setter y Getter para InsJuga
 
     
+    
 
     public void setInsJuga(Boolean InsJuga) {
         this.InsJuga = InsJuga;
