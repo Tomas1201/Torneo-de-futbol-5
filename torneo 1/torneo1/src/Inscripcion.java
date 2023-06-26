@@ -14,6 +14,23 @@ public class Inscripcion {
   static Boolean euler = true;
   static boolean ru = true;
   static boolean bu = true;
+  static boolean tru = true;
+  static boolean bru = true;
+
+  public Equipos[] getEquipos(){
+    return equipos2;
+  }
+
+
+
+
+
+
+
+
+
+
+
   public void InscripEquipo() {
 
     while (error1) {
@@ -52,15 +69,27 @@ public class Inscripcion {
           System.out.println("error : ingrese un nombre valido");
         }
       }
-      
+      while(tru){
       System.out.println("Ingrese el nombre del Subcapitan:");
       equipos2[pepe].setSubcapitan(sc.nextLine());
-
+      if (equipos2[pepe].getSubcapitan().matches("[a-zA-Z ]+")) {
+        tru = false;
+      } else {
+        System.out.println("error : ingrese un nombre valido");
+      }
+    }
       while (equipos2[pepe].getInsJuga()) {
+       while(bru){
         System.out.println("Ingrese la cantidad de jugadores: ");
-
-        equipos2[pepe].jugadores2 = new Jugadores[sc.nextByte()];
+        try {
+          equipos2[pepe].jugadores2 = new Jugadores[sc.nextByte()];
         sc.nextLine();
+         bru = false;
+        } catch (Exception e) {
+          System.out.println("Error: Debes ingresar un número válido.");
+          sc.nextLine();
+        }}
+        
 
         if (equipos2[pepe].jugadores2.length <= 14 && equipos2[pepe].jugadores2.length >= 9) {
           while (pi) {
@@ -111,6 +140,7 @@ public class Inscripcion {
 
         else if (equipos2[pepe].getCantidadJugadores() < 9) {
           System.out.println("Su equipo no cumple con la cantidad de jugadores minimo");
+          bru = true;
         } else {
 
           System.out.println("Su equipo exede la cantidad de jugadores permitido");
