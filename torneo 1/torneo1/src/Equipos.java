@@ -13,13 +13,13 @@ public class Equipos {
     final int integrantesMaximos = 14;
     final int integrantesMinimos = 9;
     final int MaxComodines = 2;
-
-    // static Jugadores Juga = new Jugadores();
     static Scanner sc = new Scanner(System.in);
-
-    Jugadores[] jugadores2 = new Jugadores[CantidadJugadores];
+     Jugadores[] jugadores2;
 
     // Setter y Getter para InsJuga
+
+    
+
     public void setInsJuga(Boolean InsJuga) {
         this.InsJuga = InsJuga;
     }
@@ -103,7 +103,7 @@ public class Equipos {
     // Se ingresan los nombres de los jugadores
 
     public void NombreJugador() {
-        for (int i = 0; i < CantidadJugadores; i++) {
+        for (int i = 0; i < jugadores2.length; i++) {
             jugadores2[i] = new Jugadores();
             System.out.println("Ingrese el nombre del " + (i + 1) + " Jugador: ");
             jugadores2[i].setNombreJugador(sc.nextLine());
