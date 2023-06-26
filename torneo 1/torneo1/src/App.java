@@ -13,6 +13,8 @@ public class App {
         Scanner sc = new Scanner(System.in);
         
        while(apagar){
+        menu.reglas();
+        
         menu.cartelera();
         opcion = sc.nextLine();
         
@@ -32,5 +34,6 @@ public class App {
                 System.out.println("Opcion invalida");
         }}
         sc.close();
+        
     }
 }
