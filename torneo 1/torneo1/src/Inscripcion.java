@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Inscripcion {
-
+  private static Boolean error1 = true;
   private byte CantidadEquipos;
   static byte decision = -1;
   static String Respuesta;
@@ -9,32 +9,60 @@ public class Inscripcion {
   static Scanner sc = new Scanner(System.in);
   static Equipos equi1 = new Equipos();
   static Jugadores juga = new Jugadores();
-  private Equipos[] equipos2;
+  static Equipos[] equipos2;
   static Boolean pi = true;
   static Boolean euler = true;
-
+  static boolean ru = true;
+  static boolean bu = true;
   public void InscripEquipo() {
-    System.out.println("Indique la cantidad de equipos a ingresar: ");
-    equipos2 = new Equipos[sc.nextByte()];
+
+    while (error1) {
+      System.out.println("Indique la cantidad de equipos a ingresar: ");
+      try {
+        CantidadEquipos = sc.nextByte();
+        equipos2 = new Equipos[CantidadEquipos];
+        error1 = false;
+
+      } catch (Exception e) {
+        System.out.println("Error: Debes ingresar un número válido.");
+        sc.nextLine();
+      }
+    }
+
     sc.nextLine();
 
     for (int pepe = 0; pepe < equipos2.length; pepe++) {
       equipos2[pepe] = new Equipos();
 
-      System.out.println("Ingrese el nombre del " + (pepe + 1) + " Equipo: ");
-      equipos2[pepe].setNombreEquipo(sc.nextLine());
+      while (ru) {
+        System.out.println("Ingrese el nombre del " + (pepe + 1) + " Equipo: ");
+        equipos2[pepe].setNombreEquipo(sc.nextLine());
+        if (equipos2[pepe].getNombreEquipo().matches("[a-zA-Z ]+")) {
+          ru = false;
+        } else {
+          System.out.println("error : ingrese un nombre valido");
+        }
+      }
+      while(bu){
       System.out.println("Ingrese el nombre de del capitan: ");
       equipos2[pepe].setCapitan(sc.nextLine());
+      if (equipos2[pepe].getCapitan().matches("[a-zA-Z ]+")) {
+          bu = false;
+        } else {
+          System.out.println("error : ingrese un nombre valido");
+        }
+      }
+      
       System.out.println("Ingrese el nombre del Subcapitan:");
       equipos2[pepe].setSubcapitan(sc.nextLine());
 
       while (equipos2[pepe].getInsJuga()) {
         System.out.println("Ingrese la cantidad de jugadores: ");
 
-        equipos2[pepe].setCantidadJugadores(sc.nextByte());
+        equipos2[pepe].jugadores2 = new Jugadores[sc.nextByte()];
         sc.nextLine();
 
-        if (equipos2[pepe].getCantidadJugadores() <= 14 && equipos2[pepe].getCantidadJugadores() >= 9) {
+        if (equipos2[pepe].jugadores2.length <= 14 && equipos2[pepe].jugadores2.length >= 9) {
           while (pi) {
             System.out.println("Todos los los jugadores del equipo cuenta con Obra social? (si)(no)");
             Respuesta = sc.nextLine();
@@ -102,9 +130,9 @@ public class Inscripcion {
           }
 
         }
+
       }
     }
-
   }
 
 }
