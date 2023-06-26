@@ -25,12 +25,6 @@ public class Inscripcion {
 
 
 
-
-
-
-
-
-
   public void InscripEquipo() {
 
     while (error1) {
@@ -61,7 +55,7 @@ public class Inscripcion {
         }
       }
       while(bu){
-      System.out.println("Ingrese el nombre de del capitan: ");
+      System.out.println("Ingrese el nombre del capitan: ");
       equipos2[pepe].setCapitan(sc.nextLine());
       if (equipos2[pepe].getCapitan().matches("[a-zA-Z ]+")) {
           bu = false;
@@ -91,14 +85,13 @@ public class Inscripcion {
         }}
         
 
-        if (equipos2[pepe].jugadores2.length <= 14 && equipos2[pepe].jugadores2.length >= 9) {
+        if (equipos2[pepe].jugadores2.length <= 14 && equipos2[pepe].jugadores2.length >= 2) {
           while (pi) {
             System.out.println("Todos los los jugadores del equipo cuenta con Obra social? (si)(no)");
             Respuesta = sc.nextLine();
             switch (Respuesta) {
               case "si":
                 equipos2[pepe].setDocument1(true);
-                System.out.println("El " + (pepe + 1) + " se registro exitosamente");
                 pi = false;
                 break;
               case "no":
@@ -138,7 +131,7 @@ public class Inscripcion {
           }
         }
 
-        else if (equipos2[pepe].getCantidadJugadores() < 9) {
+        else if (equipos2[pepe].getCantidadJugadores() < 1) {
           System.out.println("Su equipo no cumple con la cantidad de jugadores minimo");
           bru = true;
         } else {
