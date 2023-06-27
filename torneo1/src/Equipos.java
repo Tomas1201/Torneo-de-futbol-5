@@ -14,9 +14,63 @@ public class Equipos {
     private int goles;
     private int tarjetasAmarillas;
     private int tarjetasRojas;
+    private int partidosGanados;
+    private int partidosEmpatados; 
+    private int partidosPerdidos;
     final int integrantesMaximos = 14;
     final int integrantesMinimos = 9;
     final int MaxComodines = 2;
+
+      public int getPartidosPerdidos() {
+        return partidosPerdidos;
+    }
+
+    public void setPartidosPerdidos(int partidosPerdidos) {
+        this.partidosPerdidos = partidosPerdidos;
+    }
+    public int getPartidosEmpatados() {
+        return partidosEmpatados;
+    }
+
+    public void setPartidosEmpatados(int partidosEmpatados) {
+        this.partidosEmpatados = partidosEmpatados;
+    }
+
+      public int getPartidosGanados() {
+        return partidosGanados;
+    }
+
+    public void setPartidosGanados(int partidosGanados) {
+        this.partidosGanados = partidosGanados;
+    }
+
+    public void setPuntos (int puntos){
+        this.puntos = puntos;
+    }
+
+    public int getPuntos() {
+        return puntos;
+    }
+    public void setGoles (int goles){
+        this.goles = goles;
+    }
+
+    public int getGoles() {
+        return goles;
+    }
+    public void setTarjetasAmarillas (int tarjetasAmarillas){
+        this.tarjetasAmarillas = tarjetasAmarillas;
+    }
+
+    public int getTarjetasAmarillas() {
+        return tarjetasAmarillas;
+    }
+        public void setTarjetasRojas (int tarjetasRojas){
+        this.tarjetasRojas = tarjetasRojas;
+    }
+    public int getTarjetasRojas() {
+        return tarjetasRojas;
+    }
 
     static Scanner sc = new Scanner(System.in);
       Jugadores[] jugadores2;
