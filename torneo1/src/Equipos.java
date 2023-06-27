@@ -10,9 +10,14 @@ public class Equipos {
     private Boolean Document1;
     private Boolean Document2;
     private Boolean InsJuga = true;
+    private int puntos;
+    private int goles;
+    private int tarjetasAmarillas;
+    private int tarjetasRojas;
     final int integrantesMaximos = 14;
     final int integrantesMinimos = 9;
     final int MaxComodines = 2;
+
     static Scanner sc = new Scanner(System.in);
       Jugadores[] jugadores2;
     // Setter y Getter para InsJuga
