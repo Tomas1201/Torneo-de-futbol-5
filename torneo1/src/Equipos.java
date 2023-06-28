@@ -10,11 +10,75 @@ public class Equipos {
     private Boolean Document1;
     private Boolean Document2;
     private Boolean InsJuga = true;
+    private int puntos;
+    private int goles;
+    private int tarjetasAmarillas;
+    private int tarjetasRojas;
+    private int partidosGanados;
+    private int partidosEmpatados;
+    private int partidosPerdidos;
     final int integrantesMaximos = 14;
     final int integrantesMinimos = 9;
     final int MaxComodines = 2;
+
+    public int getPartidosPerdidos() {
+        return partidosPerdidos;
+    }
+
+    public void setPartidosPerdidos(int partidosPerdidos) {
+        this.partidosPerdidos = partidosPerdidos;
+    }
+
+    public int getPartidosEmpatados() {
+        return partidosEmpatados;
+    }
+
+    public void setPartidosEmpatados(int partidosEmpatados) {
+        this.partidosEmpatados = partidosEmpatados;
+    }
+
+    public int getPartidosGanados() {
+        return partidosGanados;
+    }
+
+    public void setPartidosGanados(int partidosGanados) {
+        this.partidosGanados = partidosGanados;
+    }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+
+    public int getPuntos() {
+        return puntos;
+    }
+
+    public void setGoles(int goles) {
+        this.goles = goles;
+    }
+
+    public int getGoles() {
+        return goles;
+    }
+
+    public void setTarjetasAmarillas(int tarjetasAmarillas) {
+        this.tarjetasAmarillas = tarjetasAmarillas;
+    }
+
+    public int getTarjetasAmarillas() {
+        return tarjetasAmarillas;
+    }
+
+    public void setTarjetasRojas(int tarjetasRojas) {
+        this.tarjetasRojas = tarjetasRojas;
+    }
+
+    public int getTarjetasRojas() {
+        return tarjetasRojas;
+    }
+
     static Scanner sc = new Scanner(System.in);
-      Jugadores[] jugadores2;
+    Jugadores[] jugadores2;
     // Setter y Getter para InsJuga
 
     public void setInsJuga(Boolean InsJuga) {
@@ -113,17 +177,17 @@ public class Equipos {
                     System.out.println("error : ingrese un nombre valido");
                 }
             }
-            while(delta){
-            System.out.println("Ingrese el DNI de " + jugadores2[i].getNombrejugador() + ": ");
-            try {
-                jugadores2[i].setDNI(sc.nextInt());
-                sc.nextLine();
-                delta = false;
-            } catch (Exception e) {
-                System.out.println("Error: Debes ingresar un número válido.");
-                sc.nextLine();
+            while (delta) {
+                System.out.println("Ingrese el DNI de " + jugadores2[i].getNombrejugador() + ": ");
+                try {
+                    jugadores2[i].setDNI(sc.nextInt());
+                    sc.nextLine();
+                    delta = false;
+                } catch (Exception e) {
+                    System.out.println("Error: Debes ingresar un número válido.");
+                    sc.nextLine();
+                }
             }
-        }
             System.out.println("Ingrese la posicion del jugador: ");
             jugadores2[i].setPocision(sc.nextLine());
 
@@ -140,4 +204,20 @@ public class Equipos {
 
     }
 
+    public void plantilla() {
+
+        System.out.println("╔═════════╦═══════╦════════╗");
+        System.out.println("║ Equipos ║ Goles ║ Puntos ║");
+        System.out.println("╚═════════╩═══════╩════════╝");
+        System.out.println("                                        ╔═════════╦═══════╗");
+        System.out.println("╔══════════════════════════╗            ║ Equipos ║ Goles ║");
+        System.out.println("║         Grupo  A         ║            ╚═════════╩═══════╝");
+        System.out.println("╠═════════╦═══════╦════════╣");
+
+        for (int i = 0; i < jugadores2.length; i++) {
+            System.out.println("║  " + jugadores2[i].getNombrejugador() + "      ║     " + " ║      " + " ║"
+                    + "            ╔═════════╦═══════╗");
+        }
+            System.out.println("╚═════════╩═══════╩════════╝ ");
+    }
 }

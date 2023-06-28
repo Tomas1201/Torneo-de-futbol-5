@@ -13,7 +13,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         
        while(apagar){
-        menu.reglas();
+        //menu.reglas();
         
         menu.cartelera();
         opcion = sc.nextLine();
@@ -26,7 +26,15 @@ public class App {
                 fix.fixture();
                 break;
             case "3":
-                p.plantillae();
+            String eq = sc.nextLine();
+            //Buscar el equipo
+            for(int i=0; i<ins.getEquipos().length; i++){
+                if(ins.getEquipos()[i].getNombreEquipo().equals(eq)){
+                    ins.getEquipos()[i].plantilla();
+                    break;
+                }
+            }
+                // p.plantillae();
             case "0":
             apagar = false;
                 break;

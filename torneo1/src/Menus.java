@@ -17,6 +17,8 @@ Jugadores juga = new Jugadores();
         System.out.print(texto.charAt(i));
         Thread.sleep(3);
         }
+        
+        System.out.println();
     }
 
     public void reglas() throws Exception{
@@ -34,7 +36,7 @@ Jugadores juga = new Jugadores();
         }
         Thread.sleep(1000);
         System.out.println();
-        String texto3 = "1.Todos los equipos deben de tener toda la documentacion solicita de lo contrario su equipo sera rechazado";
+        String texto3 = "1.Todos los equipos deben de tener toda la documentacion solicita de lo contrari su equipo sera rechazado";
          for (int i = 0; i < texto3.length(); i++) {
         System.out.print(texto3.charAt(i));
         Thread.sleep(10);}
@@ -43,5 +45,10 @@ Jugadores juga = new Jugadores();
         
     }
 
+
+    public void eleccion(){
+        System.out.println("¿Decea seguir ingresando equipos");
+
+    }
 
 }
