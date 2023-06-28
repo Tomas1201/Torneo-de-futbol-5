@@ -5,7 +5,7 @@ public class PlantillaPartidosFranco {
     SorteoPartidos sorteoPartidos = new SorteoPartidos();
     Equipos equipos = new Equipos();
     Grupo grupo = new Grupo();
-        public static void main(String[] args) {
+        public static void simu() {
             // Definir la cantidad de equipos y la cantidad de partidos a jugar en cada etapa del torneo
             int cantidadEquipos = 8;
             int cantidadPartidos = cantidadEquipos / 2;

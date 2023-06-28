@@ -155,6 +155,12 @@ public class Inscripcion {
         }
 
       }
+       ru = true;
+       bu = true;
+       euler = true;
+       pi = true;
+       tru = true;
+       bru = true;
     }
   }
 }
