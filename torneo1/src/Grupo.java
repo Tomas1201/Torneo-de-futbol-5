@@ -2,6 +2,14 @@ public class Grupo {
     Equipos equipos = new Equipos();
     private Equipos[] equipo;
     private String nombreGrupo;
+    private Equipos equipoGanador;
+    private Equipos equipoSegundo;
+    public Equipos getEquipoSegundo() {
+        return equipoSegundo;
+    }
+    public void setEquipoSegundo(Equipos equipoSegundo) {
+        this.equipoSegundo = equipoSegundo;
+    }
     public void setEquipo(Equipos[] equipo) {
         this.equipo = equipo;
     }
@@ -13,5 +21,11 @@ public class Grupo {
     }
     public String getNombreGrupo(){
         return nombreGrupo;
+    }
+        public Equipos getEquipoGanador() {
+        return equipoGanador;
+    }
+    public void setEquipoGanador(Equipos equipoGanador) {
+        this.equipoGanador = equipoGanador;
     }
 }
