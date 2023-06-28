@@ -13,7 +13,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         
        while(apagar){
-        menu.reglas();
+        //menu.reglas();
         
         menu.cartelera();
         opcion = sc.nextLine();

@@ -9,29 +9,29 @@ public class Inscripcion {
   static Scanner sc = new Scanner(System.in);
   static Equipos equi1 = new Equipos();
   static Jugadores juga = new Jugadores();
-  static Equipos[] equipos2;
+  static Equipos[] equipos2 = new Equipos[8];
   static Boolean pi = true;
   static Boolean euler = true;
   static boolean ru = true;
   static boolean bu = true;
   static boolean tru = true;
   static boolean bru = true;
-
+  static int iteracion;
+  static boolean Minimo = true;
   public Equipos[] getEquipos(){
     return equipos2;
   }
-
-
-
-
+  static int pepe = 0;
 
   public void InscripEquipo() {
 
+    error1 = true;
+
+    
     while (error1) {
       System.out.println("Indique la cantidad de equipos a ingresar: ");
       try {
-        CantidadEquipos = sc.nextByte();
-        equipos2 = new Equipos[CantidadEquipos];
+        CantidadEquipos += sc.nextByte();
         error1 = false;
 
       } catch (Exception e) {
@@ -39,12 +39,17 @@ public class Inscripcion {
         sc.nextLine();
       }
     }
-
     sc.nextLine();
-
-    for (int pepe = 0; pepe < equipos2.length; pepe++) {
+   // if (CantidadEquipos != 8 || CantidadEquipos != 16){
+     // 
+     // error1 = true;
+   // }
+    
+ 
+    for (; pepe < CantidadEquipos; pepe++) {
       equipos2[pepe] = new Equipos();
-
+System.out.println("Recuerde que el torneo esta diseñado solo para una cantidad 8 o 16 equipos");
+System.out.println("Cantidad de equipos ingresados: "+pepe);
       while (ru) {
         System.out.println("Ingrese el nombre del " + (pepe + 1) + " Equipo: ");
         equipos2[pepe].setNombreEquipo(sc.nextLine());
@@ -124,7 +129,7 @@ public class Inscripcion {
           }
           if (equipos2[pepe].getDocument1() && equipos2[pepe].getDocument2()) {
             equipos2[pepe].NombreJugador();
-            equipos2[pepe].Decirnombre();
+           // equipos2[pepe].Decirnombre();
             equipos2[pepe].setInsJuga(false);
           } else {
             System.out.println("Lo sentimos pero todos los jugadores deben de contar la documentacion minima");
@@ -161,6 +166,7 @@ public class Inscripcion {
        pi = true;
        tru = true;
        bru = true;
+      
     }
   }
 }

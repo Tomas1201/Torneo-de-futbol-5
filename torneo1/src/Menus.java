@@ -17,6 +17,8 @@ Jugadores juga = new Jugadores();
         System.out.print(texto.charAt(i));
         Thread.sleep(3);
         }
+        
+        System.out.println();
     }
 
     public void reglas() throws Exception{
@@ -43,5 +45,10 @@ Jugadores juga = new Jugadores();
         
     }
 
+
+    public void eleccion(){
+        System.out.println("¿Decea seguir ingresando equipos");
+
+    }
 
 }

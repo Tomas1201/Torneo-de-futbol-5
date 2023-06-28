@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class TorneoFutbol {
+public class simulacion {
     public static void main(String[] args) {
         // Definir la cantidad de equipos y la cantidad de partidos a jugar en cada etapa del torneo
         int cantidadEquipos = 8;
