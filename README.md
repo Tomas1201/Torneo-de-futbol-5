@@ -6,7 +6,7 @@ Integrantes del Grupo:
 
 *Di Carlo, Franco
 
-*Acosta, Acosta
+*Acosta, Tomas
 
 *Gonzalez, Thomas
 
