@@ -27,6 +27,8 @@ public class App {
                 break;
             case "3":
                 p.plantillae();
+            case "4":
+                
             case "0":
             apagar = false;
                 break;

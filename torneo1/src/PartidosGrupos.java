@@ -4,8 +4,6 @@ public class PartidosGrupos {
     Inscripcion inscripcion = new Inscripcion();
     SorteoGrupo sorteoGrupo = new SorteoGrupo();
     SorteoPartidos sorteoPartidos = new SorteoPartidos();
-    Grupo grupo = new Grupo();
-    Equipos equipos = new Equipos();
     int [] arrayAmarillas = {3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 0, 4, 5,};
     int [] arrayRojas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
 

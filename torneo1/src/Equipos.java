@@ -20,6 +20,8 @@ public class Equipos {
     final int integrantesMaximos = 14;
     final int integrantesMinimos = 9;
     final int MaxComodines = 2;
+    static Scanner sc = new Scanner(System.in);
+    Jugadores[] jugadores2;
 
       public int getPartidosPerdidos() {
         return partidosPerdidos;
@@ -72,8 +74,7 @@ public class Equipos {
         return tarjetasRojas;
     }
 
-    static Scanner sc = new Scanner(System.in);
-      Jugadores[] jugadores2;
+
     // Setter y Getter para InsJuga
 
     public void setInsJuga(Boolean InsJuga) {

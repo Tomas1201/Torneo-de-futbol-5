@@ -2,6 +2,7 @@ public class SegundoLugarGrupo {
     SorteoGrupo sorteoGrupo = new SorteoGrupo();
     Equipos equipos = new Equipos();
     Inscripcion inscripcion = new Inscripcion();
+    Grupo grupo = new Grupo();
         
     public void obtenerSegundoEquipo() {
         
@@ -34,7 +35,7 @@ public class SegundoLugarGrupo {
                 int amarillas = equipo.getTarjetasAmarillas();
                 int rojas = equipo.getTarjetasRojas();
 
-                if (puntos > maxPuntos2A) {
+                if (puntos > maxPuntos2A && equipo != sorteoGrupo.grupoA.getEquipoGanador()) {
                     maxPuntos2A = puntos;
                     maxGoles2A = goles;
                     minAmarillas2A = amarillas;

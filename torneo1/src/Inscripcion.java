@@ -7,8 +7,8 @@ public class Inscripcion {
   static String Respuesta;
   static String Respuesta2;
   static Scanner sc = new Scanner(System.in);
-  static Equipos equi1 = new Equipos();
-  static Jugadores juga = new Jugadores();
+  //static Equipos equi1 = new Equipos();
+  //static Jugadores juga = new Jugadores();
   static Equipos[] equipos2;
   static Boolean pi = true;
   static Boolean euler = true;
@@ -155,6 +155,12 @@ public class Inscripcion {
         }
 
       }
+       ru = true;
+       bu = true;
+       euler = true;
+       pi = true;
+       tru = true;
+       bru = true;
     }
   }
 }
