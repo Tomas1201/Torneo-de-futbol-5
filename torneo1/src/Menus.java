@@ -12,9 +12,6 @@ public class Menus {
         System.out.println("                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println();
         System.out.println();
-        //  System.out.println("                  ╔═════════════════════╦════════════════╦═════════════════════════════╦═════════════════════╦═══════════════════════════╦══════════════╦═══════════════════════════╦══════════╗");
-        // System.out.println("                   ║ Inscribir equipo(1) ║ Ver Fixture(2) ║ Ver Planillas de equipos(3) ║ Inicio de torneo(4) ║ Resultados de partidos(5) ║ Apuestas?(6) ║ Informacion del torneo(7) ║ Salir(0) ║");
-        // System.out.println("                   ╚═════════════════════╩════════════════╩═════════════════════════════╩═════════════════════╩═══════════════════════════╩══════════════╩═══════════════════════════╩══════════╝");
     }
 
 

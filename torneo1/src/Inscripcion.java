@@ -3,9 +3,6 @@ import java.util.Scanner;
 public class Inscripcion {
   private static Boolean error1 = true;
   private byte CantidadEquipos;
-  
-
-
   static byte decision = -1;
   static String Respuesta;
   static String Respuesta2;
@@ -32,7 +29,7 @@ public class Inscripcion {
     return CantidadEquipos;
   }
 
-public  byte getModalidad() {
+public byte getModalidad() {
     return Modalidad;
   }
   public void setModalidad(byte modalidad) {

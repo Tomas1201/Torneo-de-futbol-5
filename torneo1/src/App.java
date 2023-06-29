@@ -24,15 +24,20 @@ public class App {
                     ins.InscripEquipo();
                     break;
                 case "2":
+
                 if(ins.getEquipos() == null){
                     System.out.println("No hay equipos inscriptos actualmente");
                 }
                 else{
+                    if(ins.getCantidadEquipos() == 0){
+                        System.out.println("No hay equipos inscriptos actualmete");
+                    }
+                    else{
                   if(ins.getModalidad() == 8){
                     menu.fixture();}
                     else{
                         menu.fix16();
-                    }
+                    }}
                 }
                     break;
                 case "3":
