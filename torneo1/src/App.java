@@ -26,6 +26,12 @@ public class App {
                 fix.fixture();
                 break;
             case "3":
+            System.out.println("Porfavor indique el nombre del equipo que decea ver");
+            String Buscado = sc.nextLine();
+            for(int i=0; i<ins.getEquipos().length; i++){
+                if(ins.getEquipos()[i].getNombreEquipo().equals(Buscado)){
+                    ins.getEquipos()[i].plantilla();
+                    break;}}
                 p.plantillae();
             case "0":
             apagar = false;

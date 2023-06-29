@@ -199,4 +199,20 @@ public class Equipos {
 
     }
 
+     public void plantilla() {
+
+        System.out.println("╔═════════╦═══════╦════════╗");
+        System.out.println("║ Equipos ║ Goles ║ Puntos ║");
+        System.out.println("╚═════════╩═══════╩════════╝");
+        System.out.println("                                        ╔═════════╦═══════╗");
+        System.out.println("╔══════════════════════════╗            ║ Equipos ║ Goles ║");
+        System.out.println("║         Grupo  A         ║            ╚═════════╩═══════╝");
+        System.out.println("╠═════════╦═══════╦════════╣");
+
+        for (int i = 0; i < jugadores2.length; i++) {
+            System.out.println("║  " + jugadores2[i].getNombrejugador() + "      ║     " + " ║      " + " ║"
+                    + "            ╔═════════╦═══════╗");
+        }
+            System.out.println("╚═════════╩═══════╩════════╝ ");
+    }
 }
