@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Menus {
         Scanner sc = new Scanner(System.in);
-Jugadores juga = new Jugadores();
+        Jugadores juga = new Jugadores();
 
 
     public void cartelera() throws Exception{
@@ -11,6 +11,11 @@ Jugadores juga = new Jugadores();
         System.out.println("                 ~      Bienvenidos al torneo del multiverso!!      ~");
         System.out.println("                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println();
+        System.out.println();
+    }
+
+
+    public void Menu_principal() throws Exception{
         System.out.println();
         String texto = "Inscribir equipo(1) | Ver Fixture(2) | Ver Planillas de equipos(3) | Inicio de torneo(4) \n| Resultados de partidos(5) | Apuestas?(6) | Informacion del torneo(7) | Salir(0)";
         for (int i = 0; i < texto.length(); i++) {

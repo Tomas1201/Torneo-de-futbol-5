@@ -7,8 +7,6 @@ public class Inscripcion {
   static String Respuesta;
   static String Respuesta2;
   static Scanner sc = new Scanner(System.in);
-  static Equipos equi1 = new Equipos();
-  static Jugadores juga = new Jugadores();
   static Equipos[] equipos2 = new Equipos[8];
   static Boolean pi = true;
   static Boolean euler = true;
@@ -18,16 +16,36 @@ public class Inscripcion {
   static boolean bru = true;
   static int iteracion;
   static boolean Minimo = true;
+  static byte Modalidad;
+  static boolean Modalidad1 = true;
+  static int pepe = 0;
+
   public Equipos[] getEquipos(){
     return equipos2;
   }
-  static int pepe = 0;
+  
 
   public void InscripEquipo() {
 
-    error1 = true;
+    while(Modalidad1){
+    System.out.println("Porfavor ingrese la modalidad del torneo (8)(16) equipos");
+   Modalidad = sc.nextByte();
+    switch(Modalidad){
+      case 8:
+      equipos2 = new Equipos[8];
+      Modalidad1 = false;
+      break;
+      case 16:
+      equipos2 = new Equipos[16];
+      Modalidad1 = false;
+      break;
+      default:
+      System.out.println("Modalidad invalida");
+      System.out.println("Se recuerda que el torneo solo iniciara con 8 o 16 equipos");
+      break;
+    }}
 
-    
+    error1 = true;
     while (error1) {
       System.out.println("Indique la cantidad de equipos a ingresar: ");
       try {
@@ -40,16 +58,12 @@ public class Inscripcion {
       }
     }
     sc.nextLine();
-   // if (CantidadEquipos != 8 || CantidadEquipos != 16){
-     // 
-     // error1 = true;
-   // }
+   
     
  
     for (; pepe < CantidadEquipos; pepe++) {
       equipos2[pepe] = new Equipos();
-System.out.println("Recuerde que el torneo esta diseñado solo para una cantidad 8 o 16 equipos");
-System.out.println("Cantidad de equipos ingresados: "+pepe);
+System.out.println("Cantidad de equipos ingresados: "+pepe+"/"+Modalidad);
       while (ru) {
         System.out.println("Ingrese el nombre del " + (pepe + 1) + " Equipo: ");
         equipos2[pepe].setNombreEquipo(sc.nextLine());
