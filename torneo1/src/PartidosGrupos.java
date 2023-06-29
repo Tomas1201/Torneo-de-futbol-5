@@ -10,7 +10,7 @@ public class PartidosGrupos {
     int [] arrayRojas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
 
     public void partidGrup() {
-        if (inscripcion.getEquipos().length == 8){
+        if (inscripcion.getEquipos2().length == 8){
             for (int i = 0; i < sorteoPartidos.partidosA.length; i++) {
                 int golesA = generarNumeroAleatorio(0, 3);
                 int golesB = generarNumeroAleatorio(0, 3);

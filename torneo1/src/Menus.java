@@ -59,7 +59,7 @@ public class Menus {
 
  public void fixture(){
 Inscripcion ins = new Inscripcion();
-    Equipos[] juan= ins.getEquipos();
+    Equipos[] juan= ins.getEquipos2();
     int j = 0 ;
     System.out.println("╔═════════╦═══════╦════════╗");
     System.out.println("║ Equipos ║ Goles ║ Puntos ║");

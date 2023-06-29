@@ -6,6 +6,7 @@ public class App {
     static Menus menu = new Menus();
     static Inscripcion ins = new Inscripcion();
     static Equipos equi = new Equipos();
+    static SorteoGrupo sorteo = new SorteoGrupo();
     // variables
     static boolean apagar = true;
 
@@ -25,7 +26,7 @@ public class App {
                     break;
                 case "2":
 
-                if(ins.getEquipos() == null){
+                if(ins.getEquipos2() == null){
                     System.out.println("No hay equipos inscriptos actualmente");
                 }
                 else{
@@ -42,24 +43,24 @@ public class App {
                     break;
                 case "3":
 
-                if(ins.getCantidadEquipos() == 0){
+                if(ins.getEquipos2() == null){
                     System.out.println("No hay equipos inscriptos actualmente");
                 }
                 else{
-                    System.out.println("Porfavor indique el nombre del equipo que decea ver");
+                    System.out.println("Por favor indique el nombre del equipo que desea ver");
                      System.out.println("Equipos Inscriptos: ");
                     for(int i = 0; i < ins.getCantidadEquipos();i++){
-                    System.out.println("*"+ins.getEquipos()[i].getNombreEquipo());}
+                    System.out.println("*"+ins.getEquipos2()[i].getNombreEquipo());}
 
                     String Buscado = sc.nextLine();
-                    for (int i = 0; i < ins.getEquipos().length; i++) {
-                        if (ins.getEquipos()[i].getNombreEquipo().equals(Buscado)) {
-                            ins.getEquipos()[i].plantilla();
+                    for (int i = 0; i < ins.getEquipos2().length; i++) {
+                        if (ins.getEquipos2()[i].getNombreEquipo().equals(Buscado)) {
+                            ins.getEquipos2()[i].plantilla();
                            
                         }
                     }} break;
                 case "4":
-                    System.out.println("Proximamente");
+                    sorteo.realizarSimulacion();
                     break;
                 case "5":
                     System.out.println("Proximamente");

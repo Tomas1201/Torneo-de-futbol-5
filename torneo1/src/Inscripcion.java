@@ -2,12 +2,19 @@ import java.util.Scanner;
 
 public class Inscripcion {
   private static Boolean error1 = true;
-  private byte CantidadEquipos;
+  private static byte CantidadEquipos;
   static byte decision = -1;
   static String Respuesta;
   static String Respuesta2;
   static Scanner sc = new Scanner(System.in);
-  static Equipos[] equipos2;
+  static Precarga precarga = new Precarga();
+private   Equipos[] equipos2;
+
+ 
+public void setEquipos2(Equipos[] equipos2) {
+  this.equipos2 = equipos2;
+}
+
   static Boolean pi = true;
   static Boolean euler = true;
   static boolean ru = true;
@@ -17,12 +24,12 @@ public class Inscripcion {
   static int iteracion;
   static boolean Minimo = true;
   private byte Modalidad;
-  
+  static boolean decisionprecarga = true;
 
   static boolean Modalidad1 = true;
   static int pepe = 0;
 
-  public Equipos[] getEquipos(){
+  public Equipos[] getEquipos2(){
     return equipos2;
   }
   public byte getCantidadEquipos() {
@@ -59,6 +66,14 @@ public byte getModalidad() {
       System.out.println("Se recuerda que el torneo solo iniciara con 8 o 16 equipos");
       break;
     }}
+    System.out.println("Desea precargar equipos?");
+    decisionprecarga = sc.nextBoolean();
+    if(decisionprecarga){
+      precarga.pre();
+    }
+    else{
+
+    
 
     if(CantidadEquipos == equipos2.length){
   System.out.println("Todos los equipos fueron inscriptos, todo listo para iniciar el torneo");
@@ -202,5 +217,5 @@ System.out.println("Cantidad de equipos ingresados: "+pepe+"/"+Modalidad);
        bru = true;
       
     }
-  }
+  }}
 }

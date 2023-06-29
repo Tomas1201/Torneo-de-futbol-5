@@ -8,7 +8,7 @@ Equipos[][] partidosB;
 Equipos[][] partidosC;
 Equipos[][] partidosD;
     public void sorteParti() {
-        if (inscripcion.getEquipos().length == 8){
+        if (inscripcion.getEquipos2().length == 8){
             partidosA = new Equipos[6][2];
             partidosA[0][0] = sorteoGrupo.grupoA.getEquipo()[0];
             partidosA[0][1] = sorteoGrupo.grupoA.getEquipo()[1];
