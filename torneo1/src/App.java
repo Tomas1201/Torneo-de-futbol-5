@@ -6,7 +6,6 @@ public class App {
     static Menus menu = new Menus();
     static Inscripcion ins = new Inscripcion();
     static Equipos equi = new Equipos();
-    static fech fix = new fech();
     // variables
     static boolean apagar = true;
 
@@ -25,17 +24,35 @@ public class App {
                     ins.InscripEquipo();
                     break;
                 case "2":
-                    fix.fixture();
+                if(ins.getEquipos() == null){
+                    System.out.println("No hay equipos inscriptos actualmente");
+                }
+                else{
+                  if(ins.getModalidad() == 8){
+                    menu.fixture();}
+                    else{
+                        menu.fix16();
+                    }
+                }
                     break;
                 case "3":
+
+                if(ins.getCantidadEquipos() == 0){
+                    System.out.println("No hay equipos inscriptos actualmente");
+                }
+                else{
                     System.out.println("Porfavor indique el nombre del equipo que decea ver");
+                     System.out.println("Equipos Inscriptos: ");
+                    for(int i = 0; i < ins.getCantidadEquipos();i++){
+                    System.out.println("*"+ins.getEquipos()[i].getNombreEquipo());}
+
                     String Buscado = sc.nextLine();
                     for (int i = 0; i < ins.getEquipos().length; i++) {
                         if (ins.getEquipos()[i].getNombreEquipo().equals(Buscado)) {
                             ins.getEquipos()[i].plantilla();
-                            break;
+                           
                         }
-                    }
+                    }} break;
                 case "4":
                     System.out.println("Proximamente");
                     break;

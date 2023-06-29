@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Inscripcion {
   private static Boolean error1 = true;
   private byte CantidadEquipos;
+  
+
+
   static byte decision = -1;
   static String Respuesta;
   static String Respuesta2;
@@ -16,14 +19,29 @@ public class Inscripcion {
   static boolean bru = true;
   static int iteracion;
   static boolean Minimo = true;
-  static byte Modalidad;
+  private byte Modalidad;
+  
+
   static boolean Modalidad1 = true;
   static int pepe = 0;
 
   public Equipos[] getEquipos(){
     return equipos2;
   }
-  
+  public byte getCantidadEquipos() {
+    return CantidadEquipos;
+  }
+
+public  byte getModalidad() {
+    return Modalidad;
+  }
+  public void setModalidad(byte modalidad) {
+    Modalidad = modalidad;
+  }
+
+  public void setCantidadEquipos(byte cantidadEquipos) {
+    CantidadEquipos = cantidadEquipos;
+  }
 
   public void InscripEquipo() {
 
