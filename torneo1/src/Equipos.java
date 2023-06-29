@@ -17,8 +17,6 @@ public class Equipos {
     private int partidosGanados;
     private int partidosEmpatados; 
     private int partidosPerdidos;
-    private int longitudMinima = 8;
-    private int longitudMaxima = 10;
     final int integrantesMaximos = 14;
     final int integrantesMinimos = 9;
     final int MaxComodines = 2;
@@ -164,7 +162,7 @@ public class Equipos {
         for (int i = 0; i < jugadores2.length; i++) {
             jugadores2[i] = new Jugadores();
             boolean gamma = true;
-            boolean delta = true;
+        
             while (gamma) {
                 System.out.println("Ingrese el nombre del " + (i + 1) + " Jugador: ");
                 jugadores2[i].setNombreJugador(sc.nextLine());
@@ -174,25 +172,37 @@ public class Equipos {
                     System.out.println("error : ingrese un nombre valido");
                 }
             }
-            while(delta){
-            System.out.println("Ingrese el DNI de " + jugadores2[i].getNombrejugador() + ": ");
-           /*  String cadena = sc.nextLine(); */
-            try {
-               /*  int longitud = cadena.length();
-                if (longitud >= longitudMinima && longitud <= longitudMaxima ){System.out.println("El DNI debe contener entre 8 y 10 caracteres. "); */                              
-                jugadores2[i].setDNI(sc.nextInt());
-                sc.nextLine();
-                delta = false;
-               /*  else {throw new IndexOutOfBoundsException("La cadena ingresada no cumple con los requisitos de longitud.");} */
-            } catch (Exception e) {
-                System.out.println("Error: Debes ingresar un número válido.");
-                sc.nextLine();
-            }
+           
+                String DNI = "";
+                int DNICorrecto = 0;
+                do {
+                        System.out.println("Ingrese el DNI del jugador: ");
+                        DNI = sc.nextLine();
+
+                        if (DNI.matches("[0-9]+")) {
+                            if(DNI.length() <= 10 && DNI.length() >= 8){
+                            
+                            DNICorrecto = 1;
+                            
+                            }
+                            else{
+                                System.out.println("El DNI debe contener entre 8 y 10 caracteres. Intente nuevamente.");
+                            }
+
+                        } else {
+
+                            System.out.println("DNI incorrecto, por favor, intentelo de nuevo.");
+
+                        }
+                        
+                    } while (DNICorrecto != 1);
+
+      
         }
 
         }
 
-    }
+    
 
     // Imprime los nombres de los jugadores
     public void Decirnombre() {
