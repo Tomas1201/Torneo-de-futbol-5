@@ -2,7 +2,6 @@ public class Jugadores {
     private int DNI;
     private Boolean Obrasocial;
     private Boolean Aptomedica;
-    private String Posicion;
     private String NombreJugador;
     private String CondiciondeJugador; // si el jugador juega, esta en banca o no es sitado
 
@@ -16,9 +15,7 @@ public class Jugadores {
         this.DNI = DNI;
     }
 
-    public void setPocision(String Posicion) {
-        this.Posicion = Posicion;
-    }
+    
 
     public void setAptomedico(Boolean AptoMedico) {
         this.Aptomedica = AptoMedico;
@@ -51,10 +48,6 @@ public class Jugadores {
 
     public Boolean Aptomedico() {
         return Aptomedica;
-    }
-
-    public String Posicion() {
-        return Posicion;
     }
 
     public String CondicionJugador() {

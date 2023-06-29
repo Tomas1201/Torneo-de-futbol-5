@@ -7,7 +7,7 @@ public class Inscripcion {
   static String Respuesta;
   static String Respuesta2;
   static Scanner sc = new Scanner(System.in);
-  static Equipos[] equipos2 = new Equipos[8];
+  static Equipos[] equipos2;
   static Boolean pi = true;
   static Boolean euler = true;
   static boolean ru = true;
@@ -45,6 +45,11 @@ public class Inscripcion {
       break;
     }}
 
+    if(CantidadEquipos == equipos2.length){
+  System.out.println("Todos los equipos fueron inscriptos, todo listo para iniciar el torneo");
+  sc.nextLine();
+}
+else
     error1 = true;
     while (error1) {
       System.out.println("Indique la cantidad de equipos a ingresar: ");

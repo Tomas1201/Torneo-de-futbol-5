@@ -183,8 +183,6 @@ public class Equipos {
                 sc.nextLine();
             }
         }
-            System.out.println("Ingrese la posicion del jugador: ");
-            jugadores2[i].setPocision(sc.nextLine());
 
         }
 
