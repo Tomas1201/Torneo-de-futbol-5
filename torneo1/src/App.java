@@ -1,34 +1,83 @@
 
 import java.util.Scanner;
-public class App {
-static Menus menu = new Menus();
-static PlantillaE p = new PlantillaE();
-static Inscripcion ins = new Inscripcion();
-static Equipos equi = new Equipos();
-static fech fix = new fech();
 
+public class App {
+    // Instancias
+    static Menus menu = new Menus();
+    static Inscripcion ins = new Inscripcion();
+    static Equipos equi = new Equipos();
+    // variables
+    static boolean apagar = true;
 
     public static void main(String[] args) throws Exception {
-    Byte opcion;
+        String opcion;
         Scanner sc = new Scanner(System.in);
-        menu.cartelera();
-        opcion = sc.nextByte();
-        sc.nextLine();
 
-        switch(opcion){
-        case 1:
-            ins.InscripEquipo();
-            break;
-        case 2:
-        fix.fixture();
-        break;
-        case 3:
-        p.plantillae();
-        case 0:
-        break;
-        default:
-        System.out.println("Opcion invalida");
+        menu.cartelera();
+        while (apagar) {
+            // menu.reglas();
+            menu.Menu_principal();
+            opcion = sc.nextLine();
+
+            switch (opcion) {
+                case "1":
+                    ins.InscripEquipo();
+                    break;
+                case "2":
+
+                if(ins.getEquipos() == null){
+                    System.out.println("No hay equipos inscriptos actualmente");
+                }
+                else{
+                    if(ins.getCantidadEquipos() == 0){
+                        System.out.println("No hay equipos inscriptos actualmete");
+                    }
+                    else{
+                  if(ins.getModalidad() == 8){
+                    menu.fixture();}
+                    else{
+                        menu.fix16();
+                    }}
+                }
+                    break;
+                case "3":
+
+                if(ins.getCantidadEquipos() == 0){
+                    System.out.println("No hay equipos inscriptos actualmente");
+                }
+                else{
+                    System.out.println("Porfavor indique el nombre del equipo que decea ver");
+                     System.out.println("Equipos Inscriptos: ");
+                    for(int i = 0; i < ins.getCantidadEquipos();i++){
+                    System.out.println("*"+ins.getEquipos()[i].getNombreEquipo());}
+
+                    String Buscado = sc.nextLine();
+                    for (int i = 0; i < ins.getEquipos().length; i++) {
+                        if (ins.getEquipos()[i].getNombreEquipo().equals(Buscado)) {
+                            ins.getEquipos()[i].plantilla();
+                           
+                        }
+                    }} break;
+                case "4":
+                    System.out.println("Proximamente");
+                    break;
+                case "5":
+                    System.out.println("Proximamente");
+                    break;
+                case "6":
+                    System.out.println("Proximamente");
+                    break;
+                case "7":
+                    System.out.println("Proximamente");
+                    break;
+                case "0":
+                    apagar = false;
+                    break;
+                default:
+                    System.out.println("Opcion invalida");
+            }
         }
-      sc.close();
+        sc.close();
+
     }
 }
