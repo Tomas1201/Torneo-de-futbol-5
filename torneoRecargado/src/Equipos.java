@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Equipos {
-    private byte CantidadJugadores;
+    private int CantidadJugadores;
     private String Capitan;
     private String Subcapitan;
     private String NombreEquipo;
@@ -22,7 +22,16 @@ public class Equipos {
     final int MaxComodines = 2;
  static Scanner sc = new Scanner(System.in);
       Jugadores[] jugadores2;
-      public int getPartidosPerdidos() {
+
+      public Jugadores[] getJugadores2() {
+        return jugadores2;
+    }
+
+    public void setJugadores2(Jugadores[] jugadores2) {
+        this.jugadores2 = jugadores2;
+    }
+
+    public int getPartidosPerdidos() {
         return partidosPerdidos;
     }
 
@@ -85,11 +94,11 @@ public class Equipos {
     }
 
     // Setter y Getter para cantidadJugadores
-    public void setCantidadJugadores(byte cantidadJugadores) {
+    public void setCantidadJugadores(int cantidadJugadores) {
         this.CantidadJugadores = cantidadJugadores;
     }
 
-    public byte getCantidadJugadores() {
+    public int getCantidadJugadores() {
         return CantidadJugadores;
     }
 

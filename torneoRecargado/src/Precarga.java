@@ -63,7 +63,7 @@ public class Precarga {
             int cantidadJugadores = arrayEquiposModalidad[i].getCantidadJugadores();
         Jugadores[] jugadores = new Jugadores[cantidadJugadores];
         arrayEquiposModalidad[i].setJugadores2(jugadores);
-            // arrayEquiposModalidad[i].setJugadores2(this.arrayEquiposModalidad[i].getCantidadJugadores());
+            
 
              for (int k = 0; k < cantidadJugadores; k++) {
                  arrayEquiposModalidad[i].getJugadores2()[k] = new Jugadores();

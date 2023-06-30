@@ -22,7 +22,7 @@ public class Inscripcion {
   static boolean Modalidad1 = true;
   static int pepe = 0;
 
-  public Equipos[] getEquipos(){
+  public Equipos[] getEquipos2(){
     return equipos2;
   }
   public byte getCantidadEquipos() {
