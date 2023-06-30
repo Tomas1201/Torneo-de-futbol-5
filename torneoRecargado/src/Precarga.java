@@ -47,29 +47,30 @@ public class Precarga {
     static Equipos equipo16 = new Equipos();
     static Equipos[] arrayEquipos = { equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, equipo7, equipo8, equipo9,
             equipo10, equipo11, equipo12, equipo13, equipo14, equipo15, equipo16 };
-     Equipos[] arrayEquiposModalidad;
+    Equipos[] arrayEquiposModalidad;
 
     public Equipos[] pre(int modalidad) {
         arrayEquiposModalidad = new Equipos[modalidad];
         for (int i = 0; i < modalidad; i++) {
 
-            //System.arraycopy(arrayEquipos, i, arrayEquiposModalidad[i], i, 1);
+            // System.arraycopy(arrayEquipos, i, arrayEquiposModalidad[i], i, 1);
             arrayEquiposModalidad[i] = arrayEquipos[i];
             arrayEquiposModalidad[i].setNombreEquipo(nombreEquipo[i]);
             arrayEquiposModalidad[i].setCapitan(
                     nombrePrimero[generarNumeroAleatorio(0, 99)] + " " + apellido[generarNumeroAleatorio(0, 99)]);
             arrayEquiposModalidad[i].setCantidadJugadores(generarNumeroAleatorio(9, 14));
-            arrayEquiposModalidad[i].setSubcapitan(nombrePrimero[generarNumeroAleatorio(0, 99)] + " " + apellido[generarNumeroAleatorio(0, 99)]);
+            arrayEquiposModalidad[i].setSubcapitan(
+                    nombrePrimero[generarNumeroAleatorio(0, 99)] + " " + apellido[generarNumeroAleatorio(0, 99)]);
             int cantidadJugadores = arrayEquiposModalidad[i].getCantidadJugadores();
-        Jugadores[] jugadores = new Jugadores[cantidadJugadores];
-        arrayEquiposModalidad[i].setJugadores2(jugadores);
-            
+            Jugadores[] jugadores = new Jugadores[cantidadJugadores];
+            arrayEquiposModalidad[i].setJugadores2(jugadores);
 
-             for (int k = 0; k < cantidadJugadores; k++) {
-                 arrayEquiposModalidad[i].getJugadores2()[k] = new Jugadores();
-                 arrayEquiposModalidad[i].getJugadores2()[k].setNombreJugador(nombrePrimero[generarNumeroAleatorio(0, 99)] + " " + apellido[generarNumeroAleatorio(0, 99)]);
-             arrayEquiposModalidad[i].getJugadores2()[k].setDNI(generarNumeroAleatorio(10000000, 40000000));
-             }
+            for (int k = 0; k < cantidadJugadores; k++) {
+                arrayEquiposModalidad[i].getJugadores2()[k] = new Jugadores();
+                arrayEquiposModalidad[i].getJugadores2()[k].setNombreJugador(
+                        nombrePrimero[generarNumeroAleatorio(0, 99)] + " " + apellido[generarNumeroAleatorio(0, 99)]);
+                arrayEquiposModalidad[i].getJugadores2()[k].setDNI(generarNumeroAleatorio(10000000, 40000000));
+            }
         }
         System.out.println("Pepito");
         // ins.setCantidadEquipos(ins.getCantidadEquipos());

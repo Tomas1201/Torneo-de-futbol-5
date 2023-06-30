@@ -3,9 +3,10 @@ import java.util.Scanner;
 public class Inscripcion {
   private static Boolean error1 = true;
   private byte CantidadEquipos;
-  static byte decision = -1;
+  static byte decision = -100;
   static String Respuesta;
   static String Respuesta2;
+  static String Respuesta3;
   static Scanner sc = new Scanner(System.in);
   static Equipos[] equipos2;
   static Boolean pi = true;
@@ -17,7 +18,7 @@ public class Inscripcion {
   static int iteracion;
   static boolean Minimo = true;
   private byte Modalidad;
-  static boolean decisionprecarga = true;
+  static boolean decisionprecarga;
 static Precarga precarga = new Precarga();
   static boolean Modalidad1 = true;
   static int pepe = 0;
@@ -42,31 +43,51 @@ public byte getModalidad() {
 
   public void InscripEquipo() {
 
+    while (Modalidad1) {
+      System.out.println("Porfavor ingrese la modalidad del torneo (8)(16) equipos");
+      try {
+        Modalidad = sc.nextByte();
+      } catch (Exception e) {
+        System.out.println("Error: Debes ingresar un número válido.");
+        sc.nextLine();
+      }
 
-    while(Modalidad1){
-    System.out.println("Porfavor ingrese la modalidad del torneo (8)(16) equipos");
-   Modalidad = sc.nextByte();
-    switch(Modalidad){
-      case 8:
-      equipos2 = new Equipos[8];
-      Modalidad1 = false;
+      switch (Modalidad) {
+        case 8:
+          equipos2 = new Equipos[8];
+          Modalidad1 = false;
+           sc.nextLine();
+          break;
+        case 16:
+          equipos2 = new Equipos[16];
+          Modalidad1 = false;
+           sc.nextLine();
+          break;
+        default:
+          System.out.println("Modalidad invalida");
+          System.out.println("Se recuerda que el torneo solo iniciara con 8 o 16 equipos");
+          break;
+      }
+     
+    }
+
+while (precargaDe) {
+  System.out.println("Desea precargar equipos?");
+  Respuesta3 = sc.nextLine();
+  switch (Respuesta3) {
+    case "si":
+      decisionprecarga = true;
       break;
-      case 16:
-      equipos2 = new Equipos[16];
-      Modalidad1 = false;
+    case "no":
+      decisionprecarga = false;
+      precargaDe = false;
       break;
-      default:
-      System.out.println("Modalidad invalida");
-      System.out.println("Se recuerda que el torneo solo iniciara con 8 o 16 equipos");
+    default:
+      System.out.println("error : Respuesta invalida");
       break;
   }
-}
-while(precargaDe){
-System.out.println("Desea precargar equipos?");
-decisionprecarga = sc.nextBoolean();
-precargaDe = false;
 
-if (decisionprecarga) {
+  if (decisionprecarga) {
   setCantidadEquipos(Modalidad);
   equipos2 = precarga.pre(Modalidad);
   precargaDe = false;
@@ -174,28 +195,36 @@ if (decisionprecarga) {
           }
           if (equipos2[pepe].getDocument1() && equipos2[pepe].getDocument2()) {
             equipos2[pepe].NombreJugador();
-            // equipos2[pepe].Decirnombre();
             equipos2[pepe].setInsJuga(false);
           } else {
             System.out.println("Lo sentimos pero todos los jugadores deben de contar la documentacion minima");
             System.out.println("Presione ENTER para continuar.");
             sc.nextLine();
+            pepe--;
           }
           break;
-        }
-
-        else if (equipos2[pepe].getCantidadJugadores() < 1) {
-          System.out.println("Su equipo no cumple con la cantidad de jugadores minimo");
-          bru = true;
         } else {
-
+          bru = true;
           System.out.println("Su equipo exede la cantidad de jugadores permitido");
           System.out.println("Decea realizar alguna de las siguiente operaciones?");
           System.out.println("Descartar inscripcion(1), Reinscribir Jugadores(2), Salir(0)");
+          decision = sc.nextByte();
           switch (decision) {
             case 1:
-              pepe--;
               equipos2[pepe].setInsJuga(false);
+              if(pepe>0){
+                pepe--;
+              }
+              else{
+                CantidadEquipos--;
+                ru = true;
+       bu = true;
+       euler = true;
+       pi = true;
+       tru = true;
+       bru = true;
+              }
+              sc.nextLine();
               break;
             case 2:
               break;
@@ -214,6 +243,6 @@ if (decisionprecarga) {
        pi = true;
        tru = true;
        bru = true;
-      
+       equipos2[pepe].setInsJuga(true);
     }
     }}}
