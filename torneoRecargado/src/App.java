@@ -45,18 +45,19 @@ public class App {
                     if (ins.getEquipos2() == null) {
                         System.out.println("No hay equipos inscriptos actualmente");
                     } else {
-                        System.out.println("Por favor indique el nombre del equipo que desea ver");
+                        
                         System.out.println("Equipos Inscriptos: ");
                         for (int i = 0; i < ins.getCantidadEquipos(); i++) {
                             System.out.println("*" + ins.getEquipos2()[i].getNombreEquipo());
                         }
-
+                        System.out.println("Por favor indique el nombre del equipo que desea ver: ");
                         String Buscado = sc.nextLine();
                         for (int i = 0; i < ins.getEquipos2().length; i++) {
                             if (ins.getEquipos2()[i].getNombreEquipo().equals(Buscado)) {
                                 ins.getEquipos2()[i].plantilla();
 
                             }
+                          
                         }
                     }
                     break;
