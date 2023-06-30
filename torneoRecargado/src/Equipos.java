@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Equipos {
-    private int CantidadJugadores;
+    private byte CantidadJugadores;
     private String Capitan;
     private String Subcapitan;
     private String NombreEquipo;
@@ -15,30 +15,20 @@ public class Equipos {
     private int tarjetasAmarillas;
     private int tarjetasRojas;
     private int partidosGanados;
-    private int partidosEmpatados;
+    private int partidosEmpatados; 
     private int partidosPerdidos;
     final int integrantesMaximos = 14;
     final int integrantesMinimos = 9;
     final int MaxComodines = 2;
-    static Scanner sc = new Scanner(System.in);
-    Jugadores[] jugadores2;
-
-    public Jugadores[] getJugadores2() {
-        return jugadores2;
-    }
-
-    public void setJugadores2(Jugadores[] jugadores2) {
-        this.jugadores2 = jugadores2;
-    }
-
-    public int getPartidosPerdidos() {
+ static Scanner sc = new Scanner(System.in);
+      Jugadores[] jugadores2;
+      public int getPartidosPerdidos() {
         return partidosPerdidos;
     }
 
     public void setPartidosPerdidos(int partidosPerdidos) {
         this.partidosPerdidos = partidosPerdidos;
     }
-
     public int getPartidosEmpatados() {
         return partidosEmpatados;
     }
@@ -47,7 +37,7 @@ public class Equipos {
         this.partidosEmpatados = partidosEmpatados;
     }
 
-    public int getPartidosGanados() {
+      public int getPartidosGanados() {
         return partidosGanados;
     }
 
@@ -55,38 +45,35 @@ public class Equipos {
         this.partidosGanados = partidosGanados;
     }
 
-    public void setPuntos(int puntos) {
+    public void setPuntos (int puntos){
         this.puntos = puntos;
     }
 
     public int getPuntos() {
         return puntos;
     }
-
-    public void setGoles(int goles) {
+    public void setGoles (int goles){
         this.goles = goles;
     }
 
     public int getGoles() {
         return goles;
     }
-
-    public void setTarjetasAmarillas(int tarjetasAmarillas) {
+    public void setTarjetasAmarillas (int tarjetasAmarillas){
         this.tarjetasAmarillas = tarjetasAmarillas;
     }
 
     public int getTarjetasAmarillas() {
         return tarjetasAmarillas;
     }
-
-    public void setTarjetasRojas(int tarjetasRojas) {
+        public void setTarjetasRojas (int tarjetasRojas){
         this.tarjetasRojas = tarjetasRojas;
     }
-
     public int getTarjetasRojas() {
         return tarjetasRojas;
     }
 
+   
     // Setter y Getter para InsJuga
 
     public void setInsJuga(Boolean InsJuga) {
@@ -98,11 +85,11 @@ public class Equipos {
     }
 
     // Setter y Getter para cantidadJugadores
-    public void setCantidadJugadores(int cantidadJugadores) {
+    public void setCantidadJugadores(byte cantidadJugadores) {
         this.CantidadJugadores = cantidadJugadores;
     }
 
-    public int getCantidadJugadores() {
+    public byte getCantidadJugadores() {
         return CantidadJugadores;
     }
 
@@ -175,7 +162,7 @@ public class Equipos {
         for (int i = 0; i < jugadores2.length; i++) {
             jugadores2[i] = new Jugadores();
             boolean gamma = true;
-            boolean delta = true;
+        
             while (gamma) {
                 System.out.println("Ingrese el nombre del " + (i + 1) + " Jugador: ");
                 jugadores2[i].setNombreJugador(sc.nextLine());
@@ -185,21 +172,37 @@ public class Equipos {
                     System.out.println("error : ingrese un nombre valido");
                 }
             }
-            while (delta) {
-                System.out.println("Ingrese el DNI de " + jugadores2[i].getNombrejugador() + ": ");
-                try {
-                    jugadores2[i].setDNI(sc.nextInt());
-                    sc.nextLine();
-                    delta = false;
-                } catch (Exception e) {
-                    System.out.println("Error: Debes ingresar un número válido.");
-                    sc.nextLine();
-                }
-            }
+           
+                String DNI = "";
+                int DNICorrecto = 0;
+                do {
+                        System.out.println("Ingrese el DNI del jugador: ");
+                        DNI = sc.nextLine();
+
+                        if (DNI.matches("[0-9]+")) {
+                            if(DNI.length() <= 10 && DNI.length() >= 8){
+                            
+                            DNICorrecto = 1;
+                            
+                            }
+                            else{
+                                System.out.println("El DNI debe contener entre 8 y 10 caracteres. Intente nuevamente.");
+                            }
+
+                        } else {
+
+                            System.out.println("DNI incorrecto, por favor, intentelo de nuevo.");
+
+                        }
+                        
+                    } while (DNICorrecto != 1);
+
+      
+        }
 
         }
 
-    }
+    
 
     // Imprime los nombres de los jugadores
     public void Decirnombre() {
@@ -210,20 +213,20 @@ public class Equipos {
 
     }
 
-    public void plantilla() {
+     public void plantilla() {
 
         System.out.println("╔═════════╦═══════╦════════╗");
         System.out.println("║ Equipos ║ Goles ║ Puntos ║");
         System.out.println("╚═════════╩═══════╩════════╝");
-        System.out.println("                                        ");
-        System.out.println("╔══════════════════════════╗            ");
-        System.out.println("║                 ║            ");
+        System.out.println("                                        ╔═════════╦═══════╗");
+        System.out.println("╔══════════════════════════╗            ║ Equipos ║ Goles ║");
+        System.out.println("║         Grupo  A         ║            ╚═════════╩═══════╝");
         System.out.println("╠═════════╦═══════╦════════╣");
 
         for (int i = 0; i < jugadores2.length; i++) {
             System.out.println("║  " + jugadores2[i].getNombrejugador() + "      ║     " + " ║      " + " ║"
                     + "            ╔═════════╦═══════╗");
         }
-        System.out.println("╚═════════╩═══════╩════════╝ ");
+            System.out.println("╚═════════╩═══════╩════════╝ ");
     }
 }
