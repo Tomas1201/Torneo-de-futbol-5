@@ -64,6 +64,7 @@ public class Inscripcion {
       }
       break;
     }
+    // solo se ejecuta si se aceptan las condiciones
     if (Reglas1 != true) {
       while (Modalidad1) {
         System.out.println("Porfavor ingrese la modalidad del torneo (8)(16) equipos");
@@ -92,7 +93,7 @@ public class Inscripcion {
         }
 
       }
-
+      // while de desicion de precarga
       while (precargaDe) {
         System.out.println("Desea precargar equipos?");
         Respuesta3 = sc.nextLine();

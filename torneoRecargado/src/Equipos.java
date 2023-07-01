@@ -233,10 +233,10 @@ public class Equipos {
         System.out.println("╠═════════╦═══════╦════════╣");
 
         for (int i = 0; i < jugadores2.length; i++) {
-            System.out.println("║  " + jugadores2[i].getNombrejugador() + "      ║     " + " ║      " + " ║"
+            System.out.println("║  " + jugadores2[i].getNombrejugador() + ""
                     + "            ╔═════════╦═══════╗");
         }
-            System.out.println("╚═════════╩═══════╩════════╝ ");
-            
+        System.out.println("╚═════════╩═══════╩════════╝ ");
+
     }
 }
