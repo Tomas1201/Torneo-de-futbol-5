@@ -30,7 +30,7 @@ public class Eliminacion {
                 // int amarillasB = arrayAmarillas[decidirAmarillasB];
                 // int rojasA = arrayRojas[decidirRojasA];
                 // int rojasB = arrayRojas[decidirRojasB];
-
+            for(int i = 0; i < 6 ;i++){
                 if (golesA > golesB){
                     sorteoPartidos.partidosA[i][0].setPuntos(sorteoPartidos.partidosA[i][0].getPuntos() + 3);
                     sorteoPartidos.partidosA[i][0].setPartidosGanados(sorteoPartidos.partidosA[i][0].getPartidosGanados() + 1);
@@ -54,4 +54,4 @@ public class Eliminacion {
                 public static int generarNumeroAleatorio(int min, int max) {
             Random random = new Random();
                 return random.nextInt(max - min + 1) + min;
-        }
+                }}

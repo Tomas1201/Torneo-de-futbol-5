@@ -65,21 +65,21 @@ public class Menus {
     }
 
 
-public void fixture() {
-    
-    
-    for (int i = 0; i < juan.length; i++) {
-        String equipo = juan[i].getNombreEquipo();
-        if (equipo.length() >= 7) {
-            pep[i] = equipo.substring(0, 7);
-        } else {
-            StringBuilder sb = new StringBuilder(equipo);
-            while (sb.length() < 7) {
-                sb.append(" ");
+    public void fixture() {
+        juan = ins.getEquipos2();
+        pep =new String[ juan.length];
+        for (int i = 0; i < juan.length; i++) {
+            String equipo = juan[i].getNombreEquipo();
+            if (equipo.length() >= 7) {
+                pep[i] = equipo.substring(0, 7);
+            } else {
+                StringBuilder sb = new StringBuilder(equipo);
+                while (sb.length() < 7) {
+                    sb.append(" ");
+                }
+                pep[i] = sb.toString();
             }
-            pep[i] = sb.toString();
         }
-    }
 
     int g=0;
     int pu=0;
@@ -91,13 +91,13 @@ public void fixture() {
     System.out.println("╔══════════════════════════╗            ║ Equipos ║ Goles ║                                ");
     System.out.println("║         Grupo  A         ║            ╚═════════╩═══════╝                                ");
     System.out.println("╠═════════╦═══════╦════════╣                                                               ");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╔═════════╦═══════╗                                ");
+    System.out.println(  "║ "+pep[0]+" ║ "+g+" ║ "+pu+" ║            ╔═════════╦═══════╗                                ");
     System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep+" ║ "+g+" ║                                ");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╠═════════╬═══════╣                                ");
+    System.out.println(  "║ "+pep[1]+" ║ "+g+" ║ "+pu+" ║            ╠═════════╬═══════╣                                ");
     System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep+" ║ "+g+" ║                                ");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╚═════════╩═══════╝                                ");
+    System.out.println(  "║ "+pep[2]+" ║ "+g+" ║ "+pu+" ║            ╚═════════╩═══════╝                                ");
     System.out.println("╠═════════╬═══════╬════════╣                                            ╔═════════════════╗");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║                                            ║      FINAL      ║       \u001b[33m╔═══════════════════════════╗\u001b[0m");
+    System.out.println(  "║ "+pep[3]+" ║ "+g+" ║ "+pu+" ║                                            ║      FINAL      ║       \u001b[33m╔═══════════════════════════╗\u001b[0m");
     System.out.println("╚═════════╩═══════╩════════╝                                            ╠═════════╦═══════╣       \u001b[33m║          CAMPEON          ║\u001b[0m");
     System.out.println(  "                                                                        ║ "+pep+" ║ "+g+" ║       \u001b[33m╠═══════════════════════════╣\u001b[0m");
     System.out.println(  "                                                                        ╠═════════╬═══════╣       \u001b[33m║       "   +pep+   "       ║\u001b[0m");
@@ -105,13 +105,13 @@ public void fixture() {
     System.out.println("╔══════════════════════════╗                                            ╚═════════╩═══════╝");
     System.out.println("║         Grupo  B         ║                                                               ");
     System.out.println("╠═════════╦═══════╦════════╣                                                               ");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╔═════════╦═══════╗                                ");
+    System.out.println(  "║ "+pep[4]+" ║ "+g+" ║ "+pu+" ║            ╔═════════╦═══════╗                                ");
     System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep+" ║ "+g+" ║                                ");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╠═════════╬═══════╣                                ");
+    System.out.println(  "║ "+pep[5]+" ║ "+g+" ║ "+pu+" ║            ╠═════════╬═══════╣                                ");
     System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep+" ║ "+g+" ║                                ");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╚═════════╩═══════╝                                ");
+    System.out.println(  "║ "+pep[5]+" ║ "+g+" ║ "+pu+" ║            ╚═════════╩═══════╝                                ");
     System.out.println("╠═════════╬═══════╬════════╣                                                               ");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║                                                               ");
+    System.out.println(  "║ "+pep[6]+" ║ "+g+" ║ "+pu+" ║                                                               ");
     System.out.println("╚═════════╩═══════╩════════╝                                                               ");
 }
 

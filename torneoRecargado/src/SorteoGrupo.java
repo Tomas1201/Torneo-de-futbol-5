@@ -4,6 +4,7 @@ public class SorteoGrupo {
     Grupo grupoB;
     Grupo grupoC;
     Grupo grupoD;
+
     public void realizarSimulacion (){
 
             if (inscripcion.getEquipos2().length == 8) {
