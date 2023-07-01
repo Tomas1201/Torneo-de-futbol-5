@@ -49,13 +49,39 @@ public class Menus {
         }
         Thread.sleep(1000);
         System.out.println();
-        String texto3 = "1.Todos los equipos deben de tener toda la documentacion solicita de lo contrari su equipo sera rechazado";
+
+        String texto3 = "1.Todos los equipos deben de tener toda la documentacion solicita.";
          for (int i = 0; i < texto3.length(); i++) {
         System.out.print(texto3.charAt(i));
         Thread.sleep(5);}
          System.out.println();
+         String texto4 = "2.Todos los equipos de tienen que contar con un minimo de 9 y un maximo de 14 jugadores.";
+         for (int i = 0; i < texto4.length(); i++) {
+        System.out.print(texto4.charAt(i));
+        Thread.sleep(5);}
          System.out.println();
-        
+         String texto5 = "3.Todos los integrantes del equipo deben de contar con un apto medico avalado por un medico licenciado";
+         for (int i = 0; i < texto5.length(); i++) {
+        System.out.print(texto5.charAt(i));
+        Thread.sleep(5);}
+        System.out.println("");
+         String texto6 = "4. no se permite ingresar nombres que cuenten con numeros o caracteres especiales";
+         for (int i = 0; i < texto6.length(); i++) {
+        System.out.print(texto6.charAt(i));
+        Thread.sleep(5);}
+ System.out.println();
+         String texto7 = "Los equipos que no cumplan con estas normas no podran inscribirse";
+         for (int i = 0; i < texto7.length(); i++) {
+        System.out.print(texto7.charAt(i));
+        Thread.sleep(5);}
+         System.out.println();
+         String texto8 = "El torneo solo se podra iniciar cuando todos los equipos esten inscriptos";
+         for (int i = 0; i < texto8.length(); i++) {
+        System.out.print(texto8.charAt(i));
+        Thread.sleep(5);}
+ System.out.println();
+  System.out.println();
+
     }
 
 

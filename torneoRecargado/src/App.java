@@ -16,12 +16,15 @@ public class App {
 
         menu.cartelera();
         while (apagar) {
-            // menu.reglas();
+
             menu.Menu_principal();
             opcion = sc.nextLine();
 
             switch (opcion) {
                 case "1":
+                    if (ins.Reglas1) {
+                        menu.reglas();
+                    }
                     ins.InscripEquipo();
                     break;
                 case "2":
