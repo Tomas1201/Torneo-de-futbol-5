@@ -196,8 +196,9 @@
             }
             
             SorteoGrupo.grupoD.setEquipoSegundo(equipoSegundoD);
-
+           
         }
-    }
+        System.out.println("PEPE");
+    } 
 }
 
