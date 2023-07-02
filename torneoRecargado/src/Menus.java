@@ -8,7 +8,7 @@ public class Menus {
     static String[] pep;
     SorteoGrupo sorteoGrupo;
 
- //  int puntosEquipo1 = sorteoGrupo.grupoA.getEquipo()[0].getPuntos();
+
 
 
     public void cartelera() throws Exception {

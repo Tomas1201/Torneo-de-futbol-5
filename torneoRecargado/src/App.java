@@ -5,7 +5,6 @@ public class App {
     // Instancias
     static Menus menu = new Menus();
     static Inscripcion ins = new Inscripcion();
-   // static Equipos equi = new Equipos();
     static SorteoGrupo sorteo = new SorteoGrupo();
     // variables
     static boolean apagar = true;
@@ -35,18 +34,22 @@ public class App {
                         if (ins.getCantidadEquipos() == 0) {
                             System.out.println("No hay equipos inscriptos actualmete");
                         } else {
+
                             if(ins.getCantidadEquipos() == ins.getModalidad()){
+
                             if (ins.getModalidad() == 8) {
                                 menu.fixture();
                             } else {
                                 menu.fix16();
                             }
                         }
+
                         else{
                             System.out.println("Todos los equipos deben estar inscriptos para poder mostrar el fixture");
                             System.out.println("Cantidad de Equipos: "+ins.getCantidadEquipos()+"/"+ins.getModalidad());;
                         }
                         }
+
                     }
                     break;
                 case "3":
@@ -71,7 +74,16 @@ public class App {
                     }
                     break;
                 case "4":
-                    sorteo.realizarSimulacion();
+
+                    SorteoGrupo.realizarSimulacion();
+                    SorteoPartidos.sorteParti();
+                    PartidosGrupos.partidGrup();
+                    GanadorGrupo.obtenerEquipoGanador();
+                    SegundoLugarGrupo.obtenerSegundoEquipo();
+                    TercerLugarGrupo.obtenerTerceroGrupo();
+
+                  
+
 
                     break;
                 case "5":

@@ -1,36 +1,47 @@
 public class SorteoGrupo {
-      Inscripcion inscripcion = new Inscripcion();
-    Grupo grupoA;
-    Grupo grupoB;
-    Grupo grupoC;
-    Grupo grupoD;
 
-    public void realizarSimulacion (){
+    static Grupo grupoA;
+    static Grupo grupoB;
+    static Grupo grupoC;
+    static Grupo grupoD;
 
-            if (inscripcion.getEquipos2().length == 8) {
+    public static void realizarSimulacion(){
+
+            if (Inscripcion.getEquipos2().length == 8) {
+
+                Equipos[] grupA = {Inscripcion.getEquipos2()[0], Inscripcion.getEquipos2()[1], Inscripcion.getEquipos2()[2], Inscripcion.getEquipos2()[3]};
                 grupoA = new Grupo();
-                System.arraycopy(inscripcion.getEquipos2(), 0, grupoA.getEquipo(), 0, 4);
+                grupoA.setEquipo(grupA);
                 grupoA.setNombreGrupo("Grupo A");
 
+                Equipos[] grupB = {Inscripcion.getEquipos2()[4], Inscripcion.getEquipos2()[5], Inscripcion.getEquipos2()[6], Inscripcion.getEquipos2()[7]};
                 grupoB = new Grupo();
-                System.arraycopy(inscripcion.getEquipos2(), 4, grupoB.getEquipo(), 0, 4);
+                grupoB.setEquipo(grupB);
+
                 grupoB.setNombreGrupo("Grupo B");
 
             } else {
                 grupoA = new Grupo();
-                System.arraycopy(inscripcion.getEquipos2(), 0, grupoA.getEquipo(), 0, 4);
+
+
+                Equipos[] grupA = {Inscripcion.getEquipos2()[0], Inscripcion.getEquipos2()[1], Inscripcion.getEquipos2()[2], Inscripcion.getEquipos2()[3]};
+                grupoA.setEquipo(grupA);
                 grupoA.setNombreGrupo("Grupo A");
 
+                Equipos[] grupB = {Inscripcion.getEquipos2()[4], Inscripcion.getEquipos2()[5], Inscripcion.getEquipos2()[6], Inscripcion.getEquipos2()[7]};
                 grupoB = new Grupo();
-                System.arraycopy(inscripcion.getEquipos2(), 4, grupoB.getEquipo(), 0, 4);
+                grupoB.setEquipo(grupB);
                 grupoB.setNombreGrupo("Grupo B");
 
+                Equipos[] grupC = {Inscripcion.getEquipos2()[8], Inscripcion.getEquipos2()[9], Inscripcion.getEquipos2()[10], Inscripcion.getEquipos2()[11]};
                 grupoC = new Grupo();
-                System.arraycopy(inscripcion.getEquipos2(), 8, grupoC.getEquipo(), 0, 4);
+                grupoC.setEquipo(grupC);
                 grupoC.setNombreGrupo("Grupo C");
 
+                Equipos[] grupD = {Inscripcion.getEquipos2()[12], Inscripcion.getEquipos2()[13], Inscripcion.getEquipos2()[14], Inscripcion.getEquipos2()[15]};
                 grupoD = new Grupo();
-                System.arraycopy(inscripcion.getEquipos2(), 12, grupoC.getEquipo(), 0, 4);
+                grupoD.setEquipo(grupD);
+
                 grupoD.setNombreGrupo("Grupo D");
             }
         }

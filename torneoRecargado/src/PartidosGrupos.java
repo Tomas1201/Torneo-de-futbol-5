@@ -1,17 +1,14 @@
 import java.util.Random;
 
 public class PartidosGrupos {
-    Inscripcion inscripcion = new Inscripcion();
-    SorteoGrupo sorteoGrupo = new SorteoGrupo();
-    SorteoPartidos sorteoPartidos = new SorteoPartidos();
-    Grupo grupo = new Grupo();
-    Equipos equipos = new Equipos();
-    int [] arrayAmarillas = {3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 0, 4, 5,};
-    int [] arrayRojas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
 
-    public void partidGrup() {
-        if (inscripcion.getEquipos2().length == 8){
-            for (int i = 0; i < sorteoPartidos.partidosA.length; i++) {
+    static int [] arrayAmarillas = {3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 0, 4, 5,};
+    static int [] arrayRojas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
+
+    public static void partidGrup() {
+        if (Inscripcion.getEquipos2().length == 8){
+            for (int i = 0; i < SorteoPartidos.partidosA.length; i++) {
+
                 int golesA = generarNumeroAleatorio(0, 3);
                 int golesB = generarNumeroAleatorio(0, 3);
                 int decidirAmarillasA = generarNumeroAleatorio(0, 16);
@@ -22,26 +19,28 @@ public class PartidosGrupos {
                 int amarillasB = arrayAmarillas[decidirAmarillasB];
                 int rojasA = arrayRojas[decidirRojasA];
                 int rojasB = arrayRojas[decidirRojasB];
-                sorteoPartidos.partidosA[i][0].setGoles(sorteoPartidos.partidosA[i][0].getGoles() + golesA);
-                sorteoPartidos.partidosA[i][1].setGoles(sorteoPartidos.partidosA[i][1].getGoles() + golesB);
-                sorteoPartidos.partidosA[i][0].setTarjetasAmarillas(sorteoPartidos.partidosA[i][0].getTarjetasAmarillas() + amarillasA);
-                sorteoPartidos.partidosA[i][1].setTarjetasAmarillas(sorteoPartidos.partidosA[i][1].getTarjetasAmarillas() + amarillasB);
-                sorteoPartidos.partidosA[i][0].setTarjetasRojas(sorteoPartidos.partidosA[i][0].getTarjetasRojas() + rojasA);
-                sorteoPartidos.partidosA[i][1].setTarjetasRojas(sorteoPartidos.partidosA[i][1].getTarjetasRojas() + rojasB);
+
+                SorteoPartidos.partidosA[i][0].setGoles(SorteoPartidos.partidosA[i][0].getGoles() + golesA);
+                SorteoPartidos.partidosA[i][1].setGoles(SorteoPartidos.partidosA[i][1].getGoles() + golesB);
+                SorteoPartidos.partidosA[i][0].setTarjetasAmarillas(SorteoPartidos.partidosA[i][0].getTarjetasAmarillas() + amarillasA);
+                SorteoPartidos.partidosA[i][1].setTarjetasAmarillas(SorteoPartidos.partidosA[i][1].getTarjetasAmarillas() + amarillasB);
+                SorteoPartidos.partidosA[i][0].setTarjetasRojas(SorteoPartidos.partidosA[i][0].getTarjetasRojas() + rojasA);
+                SorteoPartidos.partidosA[i][1].setTarjetasRojas(SorteoPartidos.partidosA[i][1].getTarjetasRojas() + rojasB);
                 if (golesA > golesB){
-                    sorteoPartidos.partidosA[i][0].setPuntos(sorteoPartidos.partidosA[i][0].getPuntos() + 3);
-                    sorteoPartidos.partidosA[i][0].setPartidosGanados(sorteoPartidos.partidosA[i][0].getPartidosGanados() + 1);
-                    sorteoPartidos.partidosA[i][1].setPartidosPerdidos(sorteoPartidos.partidosA[i][1].getPartidosPerdidos() + 1);
+                    SorteoPartidos.partidosA[i][0].setPuntos(SorteoPartidos.partidosA[i][0].getPuntos() + 3);
+                    SorteoPartidos.partidosA[i][0].setPartidosGanados(SorteoPartidos.partidosA[i][0].getPartidosGanados() + 1);
+                    SorteoPartidos.partidosA[i][1].setPartidosPerdidos(SorteoPartidos.partidosA[i][1].getPartidosPerdidos() + 1);
 
                 } else if (golesA == golesB) {
-                    sorteoPartidos.partidosA[i][0].setPuntos(sorteoPartidos.partidosA[i][0].getPuntos() + 1);
-                    sorteoPartidos.partidosA[i][1].setPuntos(sorteoPartidos.partidosA[i][1].getPuntos() + 1);
-                    sorteoPartidos.partidosA[i][0].setPartidosEmpatados(sorteoPartidos.partidosA[i][0].getPartidosEmpatados() + 1);
-                    sorteoPartidos.partidosA[i][1].setPartidosEmpatados(sorteoPartidos.partidosA[i][1].getPartidosEmpatados() + 1);
+                    SorteoPartidos.partidosA[i][0].setPuntos(SorteoPartidos.partidosA[i][0].getPuntos() + 1);
+                    SorteoPartidos.partidosA[i][1].setPuntos(SorteoPartidos.partidosA[i][1].getPuntos() + 1);
+                    SorteoPartidos.partidosA[i][0].setPartidosEmpatados(SorteoPartidos.partidosA[i][0].getPartidosEmpatados() + 1);
+                    SorteoPartidos.partidosA[i][1].setPartidosEmpatados(SorteoPartidos.partidosA[i][1].getPartidosEmpatados() + 1);
                 } else {
-                    sorteoPartidos.partidosA[i][1].setPuntos(sorteoPartidos.partidosA[i][1].getPuntos() + 3);
-                    sorteoPartidos.partidosA[i][1].setPartidosGanados(sorteoPartidos.partidosA[i][1].getPartidosGanados() + 1);
-                    sorteoPartidos.partidosA[i][0].setPartidosPerdidos(sorteoPartidos.partidosA[i][0].getPartidosPerdidos() + 1);
+                    SorteoPartidos.partidosA[i][1].setPuntos(SorteoPartidos.partidosA[i][1].getPuntos() + 3);
+                    SorteoPartidos.partidosA[i][1].setPartidosGanados(SorteoPartidos.partidosA[i][1].getPartidosGanados() + 1);
+                    SorteoPartidos.partidosA[i][0].setPartidosPerdidos(SorteoPartidos.partidosA[i][0].getPartidosPerdidos() + 1);
+
                 }
                 int golesA2 = generarNumeroAleatorio(0, 3);
                 int golesB2 = generarNumeroAleatorio(0, 3);
@@ -53,29 +52,31 @@ public class PartidosGrupos {
                 int amarillasB2 = arrayAmarillas[decidirAmarillasB2];
                 int rojasA2 = arrayRojas[decidirRojasA2];
                 int rojasB2 = arrayRojas[decidirRojasB2];
-                sorteoPartidos.partidosB[i][0].setGoles(sorteoPartidos.partidosB[i][0].getGoles() + golesA2);
-                sorteoPartidos.partidosB[i][1].setGoles(sorteoPartidos.partidosB[i][1].getGoles() + golesB2);
-                sorteoPartidos.partidosB[i][0].setTarjetasAmarillas(sorteoPartidos.partidosB[i][0].getTarjetasAmarillas() + amarillasA2);
-                sorteoPartidos.partidosB[i][1].setTarjetasAmarillas(sorteoPartidos.partidosB[i][1].getTarjetasAmarillas() + amarillasB2);
-                sorteoPartidos.partidosB[i][0].setTarjetasRojas(sorteoPartidos.partidosB[i][0].getTarjetasRojas() + rojasA2);
-                sorteoPartidos.partidosB[i][1].setTarjetasRojas(sorteoPartidos.partidosB[i][1].getTarjetasRojas() + rojasB2);
+
+                SorteoPartidos.partidosB[i][0].setGoles(SorteoPartidos.partidosB[i][0].getGoles() + golesA2);
+                SorteoPartidos.partidosB[i][1].setGoles(SorteoPartidos.partidosB[i][1].getGoles() + golesB2);
+                SorteoPartidos.partidosB[i][0].setTarjetasAmarillas(SorteoPartidos.partidosB[i][0].getTarjetasAmarillas() + amarillasA2);
+                SorteoPartidos.partidosB[i][1].setTarjetasAmarillas(SorteoPartidos.partidosB[i][1].getTarjetasAmarillas() + amarillasB2);
+                SorteoPartidos.partidosB[i][0].setTarjetasRojas(SorteoPartidos.partidosB[i][0].getTarjetasRojas() + rojasA2);
+                SorteoPartidos.partidosB[i][1].setTarjetasRojas(SorteoPartidos.partidosB[i][1].getTarjetasRojas() + rojasB2);
                   if (golesA2 > golesB2){
-                    sorteoPartidos.partidosB[i][0].setPuntos(sorteoPartidos.partidosB[i][0].getPuntos() + 3);
-                    sorteoPartidos.partidosB[i][0].setPartidosGanados(sorteoPartidos.partidosB[i][0].getPartidosGanados() + 1);
-                    sorteoPartidos.partidosB[i][1].setPartidosPerdidos(sorteoPartidos.partidosB[i][1].getPartidosPerdidos() + 1);
+                    SorteoPartidos.partidosB[i][0].setPuntos(SorteoPartidos.partidosB[i][0].getPuntos() + 3);
+                    SorteoPartidos.partidosB[i][0].setPartidosGanados(SorteoPartidos.partidosB[i][0].getPartidosGanados() + 1);
+                    SorteoPartidos.partidosB[i][1].setPartidosPerdidos(SorteoPartidos.partidosB[i][1].getPartidosPerdidos() + 1);
 
                 } else if (golesA2 == golesB2) {
-                    sorteoPartidos.partidosB[i][0].setPuntos(sorteoPartidos.partidosB[i][0].getPuntos() + 1);
-                    sorteoPartidos.partidosB[i][1].setPuntos(sorteoPartidos.partidosB[i][1].getPuntos() + 1);
-                    sorteoPartidos.partidosB[i][0].setPartidosEmpatados(sorteoPartidos.partidosB[i][0].getPartidosEmpatados() + 1);
-                    sorteoPartidos.partidosB[i][1].setPartidosEmpatados(sorteoPartidos.partidosB[i][1].getPartidosEmpatados() + 1);
+                    SorteoPartidos.partidosB[i][0].setPuntos(SorteoPartidos.partidosB[i][0].getPuntos() + 1);
+                    SorteoPartidos.partidosB[i][1].setPuntos(SorteoPartidos.partidosB[i][1].getPuntos() + 1);
+                    SorteoPartidos.partidosB[i][0].setPartidosEmpatados(SorteoPartidos.partidosB[i][0].getPartidosEmpatados() + 1);
+                    SorteoPartidos.partidosB[i][1].setPartidosEmpatados(SorteoPartidos.partidosB[i][1].getPartidosEmpatados() + 1);
                 } else {
-                    sorteoPartidos.partidosB[i][1].setPuntos(sorteoPartidos.partidosB[i][1].getPuntos() + 3);
-                    sorteoPartidos.partidosB[i][1].setPartidosGanados(sorteoPartidos.partidosB[i][1].getPartidosGanados() + 1);
-                    sorteoPartidos.partidosB[i][0].setPartidosPerdidos(sorteoPartidos.partidosB[i][0].getPartidosPerdidos() + 1);
+                    SorteoPartidos.partidosB[i][1].setPuntos(SorteoPartidos.partidosB[i][1].getPuntos() + 3);
+                    SorteoPartidos.partidosB[i][1].setPartidosGanados(SorteoPartidos.partidosB[i][1].getPartidosGanados() + 1);
+                    SorteoPartidos.partidosB[i][0].setPartidosPerdidos(SorteoPartidos.partidosB[i][0].getPartidosPerdidos() + 1);
                 }
             }} else {
-                for (int i = 0; i < sorteoPartidos.partidosA.length; i++) {
+                for (int i = 0; i < SorteoPartidos.partidosA.length; i++) {
+
                     int golesA = generarNumeroAleatorio(0, 3);
                     int golesB = generarNumeroAleatorio(0, 3);
                     int decidirAmarillasA = generarNumeroAleatorio(0, 16);
@@ -86,26 +87,28 @@ public class PartidosGrupos {
                     int amarillasB = arrayAmarillas[decidirAmarillasB];
                     int rojasA = arrayRojas[decidirRojasA];
                     int rojasB = arrayRojas[decidirRojasB];
-                    sorteoPartidos.partidosA[i][0].setGoles(sorteoPartidos.partidosA[i][0].getGoles() + golesA);
-                    sorteoPartidos.partidosA[i][1].setGoles(sorteoPartidos.partidosA[i][1].getGoles() + golesB);
-                    sorteoPartidos.partidosA[i][0].setTarjetasAmarillas(sorteoPartidos.partidosA[i][0].getTarjetasAmarillas() + amarillasA);
-                    sorteoPartidos.partidosA[i][1].setTarjetasAmarillas(sorteoPartidos.partidosA[i][1].getTarjetasAmarillas() + amarillasB);
-                    sorteoPartidos.partidosA[i][0].setTarjetasRojas(sorteoPartidos.partidosA[i][0].getTarjetasRojas() + rojasA);
-                    sorteoPartidos.partidosA[i][1].setTarjetasRojas(sorteoPartidos.partidosA[i][1].getTarjetasRojas() + rojasB);
+
+                    SorteoPartidos.partidosA[i][0].setGoles(SorteoPartidos.partidosA[i][0].getGoles() + golesA);
+                    SorteoPartidos.partidosA[i][1].setGoles(SorteoPartidos.partidosA[i][1].getGoles() + golesB);
+                    SorteoPartidos.partidosA[i][0].setTarjetasAmarillas(SorteoPartidos.partidosA[i][0].getTarjetasAmarillas() + amarillasA);
+                    SorteoPartidos.partidosA[i][1].setTarjetasAmarillas(SorteoPartidos.partidosA[i][1].getTarjetasAmarillas() + amarillasB);
+                    SorteoPartidos.partidosA[i][0].setTarjetasRojas(SorteoPartidos.partidosA[i][0].getTarjetasRojas() + rojasA);
+                    SorteoPartidos.partidosA[i][1].setTarjetasRojas(SorteoPartidos.partidosA[i][1].getTarjetasRojas() + rojasB);
                     if (golesA > golesB){
-                        sorteoPartidos.partidosA[i][0].setPuntos(sorteoPartidos.partidosA[i][0].getPuntos() + 3);
-                        sorteoPartidos.partidosA[i][0].setPartidosGanados(sorteoPartidos.partidosA[i][0].getPartidosGanados() + 1);
-                        sorteoPartidos.partidosA[i][1].setPartidosPerdidos(sorteoPartidos.partidosA[i][1].getPartidosPerdidos() + 1);
+                        SorteoPartidos.partidosA[i][0].setPuntos(SorteoPartidos.partidosA[i][0].getPuntos() + 3);
+                        SorteoPartidos.partidosA[i][0].setPartidosGanados(SorteoPartidos.partidosA[i][0].getPartidosGanados() + 1);
+                        SorteoPartidos.partidosA[i][1].setPartidosPerdidos(SorteoPartidos.partidosA[i][1].getPartidosPerdidos() + 1);
 
                     } else if (golesA == golesB) {
-                        sorteoPartidos.partidosA[i][0].setPuntos(sorteoPartidos.partidosA[i][0].getPuntos() + 1);
-                        sorteoPartidos.partidosA[i][1].setPuntos(sorteoPartidos.partidosA[i][1].getPuntos() + 1);
-                        sorteoPartidos.partidosA[i][0].setPartidosEmpatados(sorteoPartidos.partidosA[i][0].getPartidosEmpatados() + 1);
-                        sorteoPartidos.partidosA[i][1].setPartidosEmpatados(sorteoPartidos.partidosA[i][1].getPartidosEmpatados() + 1);
+                        SorteoPartidos.partidosA[i][0].setPuntos(SorteoPartidos.partidosA[i][0].getPuntos() + 1);
+                        SorteoPartidos.partidosA[i][1].setPuntos(SorteoPartidos.partidosA[i][1].getPuntos() + 1);
+                        SorteoPartidos.partidosA[i][0].setPartidosEmpatados(SorteoPartidos.partidosA[i][0].getPartidosEmpatados() + 1);
+                        SorteoPartidos.partidosA[i][1].setPartidosEmpatados(SorteoPartidos.partidosA[i][1].getPartidosEmpatados() + 1);
                     } else {
-                        sorteoPartidos.partidosA[i][1].setPuntos(sorteoPartidos.partidosA[i][1].getPuntos() + 3);
-                        sorteoPartidos.partidosA[i][1].setPartidosGanados(sorteoPartidos.partidosA[i][1].getPartidosGanados() + 1);
-                        sorteoPartidos.partidosA[i][0].setPartidosPerdidos(sorteoPartidos.partidosA[i][0].getPartidosPerdidos() + 1);
+                        SorteoPartidos.partidosA[i][1].setPuntos(SorteoPartidos.partidosA[i][1].getPuntos() + 3);
+                        SorteoPartidos.partidosA[i][1].setPartidosGanados(SorteoPartidos.partidosA[i][1].getPartidosGanados() + 1);
+                        SorteoPartidos.partidosA[i][0].setPartidosPerdidos(SorteoPartidos.partidosA[i][0].getPartidosPerdidos() + 1);
+
                     }
                     int golesA2 = generarNumeroAleatorio(0, 3);
                     int golesB2 = generarNumeroAleatorio(0, 3);
@@ -117,26 +120,28 @@ public class PartidosGrupos {
                     int amarillasB2 = arrayAmarillas[decidirAmarillasB2];
                     int rojasA2 = arrayRojas[decidirRojasA2];
                     int rojasB2 = arrayRojas[decidirRojasB2];
-                    sorteoPartidos.partidosB[i][0].setGoles(sorteoPartidos.partidosB[i][0].getGoles() + golesA2);
-                    sorteoPartidos.partidosB[i][1].setGoles(sorteoPartidos.partidosB[i][1].getGoles() + golesB2);
-                    sorteoPartidos.partidosB[i][0].setTarjetasAmarillas(sorteoPartidos.partidosB[i][0].getTarjetasAmarillas() + amarillasA2);
-                    sorteoPartidos.partidosB[i][1].setTarjetasAmarillas(sorteoPartidos.partidosB[i][1].getTarjetasAmarillas() + amarillasB2);
-                    sorteoPartidos.partidosB[i][0].setTarjetasRojas(sorteoPartidos.partidosB[i][0].getTarjetasRojas() + rojasA2);
-                    sorteoPartidos.partidosB[i][1].setTarjetasRojas(sorteoPartidos.partidosB[i][1].getTarjetasRojas() + rojasB2);
+
+                    SorteoPartidos.partidosB[i][0].setGoles(SorteoPartidos.partidosB[i][0].getGoles() + golesA2);
+                    SorteoPartidos.partidosB[i][1].setGoles(SorteoPartidos.partidosB[i][1].getGoles() + golesB2);
+                    SorteoPartidos.partidosB[i][0].setTarjetasAmarillas(SorteoPartidos.partidosB[i][0].getTarjetasAmarillas() + amarillasA2);
+                    SorteoPartidos.partidosB[i][1].setTarjetasAmarillas(SorteoPartidos.partidosB[i][1].getTarjetasAmarillas() + amarillasB2);
+                    SorteoPartidos.partidosB[i][0].setTarjetasRojas(SorteoPartidos.partidosB[i][0].getTarjetasRojas() + rojasA2);
+                    SorteoPartidos.partidosB[i][1].setTarjetasRojas(SorteoPartidos.partidosB[i][1].getTarjetasRojas() + rojasB2);
                     if (golesA2 > golesB2){
-                        sorteoPartidos.partidosB[i][0].setPuntos(sorteoPartidos.partidosB[i][0].getPuntos() + 3);
-                        sorteoPartidos.partidosB[i][0].setPartidosGanados(sorteoPartidos.partidosB[i][0].getPartidosGanados() + 1);
-                        sorteoPartidos.partidosB[i][1].setPartidosPerdidos(sorteoPartidos.partidosB[i][1].getPartidosPerdidos() + 1);
+                        SorteoPartidos.partidosB[i][0].setPuntos(SorteoPartidos.partidosB[i][0].getPuntos() + 3);
+                        SorteoPartidos.partidosB[i][0].setPartidosGanados(SorteoPartidos.partidosB[i][0].getPartidosGanados() + 1);
+                        SorteoPartidos.partidosB[i][1].setPartidosPerdidos(SorteoPartidos.partidosB[i][1].getPartidosPerdidos() + 1);
 
                     } else if (golesA2 == golesB2) {
-                        sorteoPartidos.partidosB[i][0].setPuntos(sorteoPartidos.partidosB[i][0].getPuntos() + 1);
-                        sorteoPartidos.partidosB[i][1].setPuntos(sorteoPartidos.partidosB[i][1].getPuntos() + 1);
-                        sorteoPartidos.partidosB[i][0].setPartidosEmpatados(sorteoPartidos.partidosB[i][0].getPartidosEmpatados() + 1);
-                        sorteoPartidos.partidosB[i][1].setPartidosEmpatados(sorteoPartidos.partidosB[i][1].getPartidosEmpatados() + 1);
+                        SorteoPartidos.partidosB[i][0].setPuntos(SorteoPartidos.partidosB[i][0].getPuntos() + 1);
+                        SorteoPartidos.partidosB[i][1].setPuntos(SorteoPartidos.partidosB[i][1].getPuntos() + 1);
+                        SorteoPartidos.partidosB[i][0].setPartidosEmpatados(SorteoPartidos.partidosB[i][0].getPartidosEmpatados() + 1);
+                        SorteoPartidos.partidosB[i][1].setPartidosEmpatados(SorteoPartidos.partidosB[i][1].getPartidosEmpatados() + 1);
                     } else {
-                        sorteoPartidos.partidosB[i][1].setPuntos(sorteoPartidos.partidosB[i][1].getPuntos() + 3);
-                        sorteoPartidos.partidosB[i][1].setPartidosGanados(sorteoPartidos.partidosB[i][1].getPartidosGanados() + 1);
-                        sorteoPartidos.partidosB[i][0].setPartidosPerdidos(sorteoPartidos.partidosB[i][0].getPartidosPerdidos() + 1);
+                        SorteoPartidos.partidosB[i][1].setPuntos(SorteoPartidos.partidosB[i][1].getPuntos() + 3);
+                        SorteoPartidos.partidosB[i][1].setPartidosGanados(SorteoPartidos.partidosB[i][1].getPartidosGanados() + 1);
+                        SorteoPartidos.partidosB[i][0].setPartidosPerdidos(SorteoPartidos.partidosB[i][0].getPartidosPerdidos() + 1);
+
                     }
                     int golesA3 = generarNumeroAleatorio(0, 3);
                     int golesB3 = generarNumeroAleatorio(0, 3);
@@ -148,26 +153,28 @@ public class PartidosGrupos {
                     int amarillasB3 = arrayAmarillas[decidirAmarillasB3];
                     int rojasA3 = arrayRojas[decidirRojasA3];
                     int rojasB3 = arrayRojas[decidirRojasB3];
-                    sorteoPartidos.partidosC[i][0].setGoles(sorteoPartidos.partidosC[i][0].getGoles() + golesA3);
-                    sorteoPartidos.partidosC[i][1].setGoles(sorteoPartidos.partidosC[i][1].getGoles() + golesB3);
-                    sorteoPartidos.partidosC[i][0].setTarjetasAmarillas(sorteoPartidos.partidosC[i][0].getTarjetasAmarillas() + amarillasA3);
-                    sorteoPartidos.partidosC[i][1].setTarjetasAmarillas(sorteoPartidos.partidosC[i][1].getTarjetasAmarillas() + amarillasB3);
-                    sorteoPartidos.partidosC[i][0].setTarjetasRojas(sorteoPartidos.partidosC[i][0].getTarjetasRojas() + rojasA3);
-                    sorteoPartidos.partidosC[i][1].setTarjetasRojas(sorteoPartidos.partidosC[i][1].getTarjetasRojas() + rojasB3);
+
+                    SorteoPartidos.partidosC[i][0].setGoles(SorteoPartidos.partidosC[i][0].getGoles() + golesA3);
+                    SorteoPartidos.partidosC[i][1].setGoles(SorteoPartidos.partidosC[i][1].getGoles() + golesB3);
+                    SorteoPartidos.partidosC[i][0].setTarjetasAmarillas(SorteoPartidos.partidosC[i][0].getTarjetasAmarillas() + amarillasA3);
+                    SorteoPartidos.partidosC[i][1].setTarjetasAmarillas(SorteoPartidos.partidosC[i][1].getTarjetasAmarillas() + amarillasB3);
+                    SorteoPartidos.partidosC[i][0].setTarjetasRojas(SorteoPartidos.partidosC[i][0].getTarjetasRojas() + rojasA3);
+                    SorteoPartidos.partidosC[i][1].setTarjetasRojas(SorteoPartidos.partidosC[i][1].getTarjetasRojas() + rojasB3);
                     if (golesA3 > golesB3){
-                        sorteoPartidos.partidosC[i][0].setPuntos(sorteoPartidos.partidosC[i][0].getPuntos() + 3);
-                        sorteoPartidos.partidosC[i][0].setPartidosGanados(sorteoPartidos.partidosC[i][0].getPartidosGanados() + 1);
-                        sorteoPartidos.partidosC[i][1].setPartidosPerdidos(sorteoPartidos.partidosC[i][1].getPartidosPerdidos() + 1);
+                        SorteoPartidos.partidosC[i][0].setPuntos(SorteoPartidos.partidosC[i][0].getPuntos() + 3);
+                        SorteoPartidos.partidosC[i][0].setPartidosGanados(SorteoPartidos.partidosC[i][0].getPartidosGanados() + 1);
+                        SorteoPartidos.partidosC[i][1].setPartidosPerdidos(SorteoPartidos.partidosC[i][1].getPartidosPerdidos() + 1);
 
                     } else if (golesA3 == golesB3) {
-                        sorteoPartidos.partidosC[i][0].setPuntos(sorteoPartidos.partidosC[i][0].getPuntos() + 1);
-                        sorteoPartidos.partidosC[i][1].setPuntos(sorteoPartidos.partidosC[i][1].getPuntos() + 1);
-                        sorteoPartidos.partidosC[i][0].setPartidosEmpatados(sorteoPartidos.partidosC[i][0].getPartidosEmpatados() + 1);
-                        sorteoPartidos.partidosC[i][1].setPartidosEmpatados(sorteoPartidos.partidosC[i][1].getPartidosEmpatados() + 1);
+                        SorteoPartidos.partidosC[i][0].setPuntos(SorteoPartidos.partidosC[i][0].getPuntos() + 1);
+                        SorteoPartidos.partidosC[i][1].setPuntos(SorteoPartidos.partidosC[i][1].getPuntos() + 1);
+                        SorteoPartidos.partidosC[i][0].setPartidosEmpatados(SorteoPartidos.partidosC[i][0].getPartidosEmpatados() + 1);
+                        SorteoPartidos.partidosC[i][1].setPartidosEmpatados(SorteoPartidos.partidosC[i][1].getPartidosEmpatados() + 1);
                     } else {
-                        sorteoPartidos.partidosC[i][1].setPuntos(sorteoPartidos.partidosC[i][1].getPuntos() + 3);
-                        sorteoPartidos.partidosC[i][1].setPartidosGanados(sorteoPartidos.partidosC[i][1].getPartidosGanados() + 1);
-                        sorteoPartidos.partidosC[i][0].setPartidosPerdidos(sorteoPartidos.partidosC[i][0].getPartidosPerdidos() + 1);
+                        SorteoPartidos.partidosC[i][1].setPuntos(SorteoPartidos.partidosC[i][1].getPuntos() + 3);
+                        SorteoPartidos.partidosC[i][1].setPartidosGanados(SorteoPartidos.partidosC[i][1].getPartidosGanados() + 1);
+                        SorteoPartidos.partidosC[i][0].setPartidosPerdidos(SorteoPartidos.partidosC[i][0].getPartidosPerdidos() + 1);
+
                     }
                     int golesA4 = generarNumeroAleatorio(0, 3);
                     int golesB4 = generarNumeroAleatorio(0, 3);
@@ -179,26 +186,28 @@ public class PartidosGrupos {
                     int amarillasB4 = arrayAmarillas[decidirAmarillasB4];
                     int rojasA4 = arrayRojas[decidirRojasA4];
                     int rojasB4 = arrayRojas[decidirRojasB4];
-                    sorteoPartidos.partidosD[i][0].setGoles(sorteoPartidos.partidosD[i][0].getGoles() + golesA4);
-                    sorteoPartidos.partidosD[i][1].setGoles(sorteoPartidos.partidosD[i][1].getGoles() + golesB4);
-                    sorteoPartidos.partidosD[i][0].setTarjetasAmarillas(sorteoPartidos.partidosD[i][0].getTarjetasAmarillas() + amarillasA4);
-                    sorteoPartidos.partidosD[i][1].setTarjetasAmarillas(sorteoPartidos.partidosD[i][1].getTarjetasAmarillas() + amarillasB4);
-                    sorteoPartidos.partidosD[i][0].setTarjetasRojas(sorteoPartidos.partidosD[i][0].getTarjetasRojas() + rojasA4);
-                    sorteoPartidos.partidosD[i][1].setTarjetasRojas(sorteoPartidos.partidosD[i][1].getTarjetasRojas() + rojasB4);
+
+                    SorteoPartidos.partidosD[i][0].setGoles(SorteoPartidos.partidosD[i][0].getGoles() + golesA4);
+                    SorteoPartidos.partidosD[i][1].setGoles(SorteoPartidos.partidosD[i][1].getGoles() + golesB4);
+                    SorteoPartidos.partidosD[i][0].setTarjetasAmarillas(SorteoPartidos.partidosD[i][0].getTarjetasAmarillas() + amarillasA4);
+                    SorteoPartidos.partidosD[i][1].setTarjetasAmarillas(SorteoPartidos.partidosD[i][1].getTarjetasAmarillas() + amarillasB4);
+                    SorteoPartidos.partidosD[i][0].setTarjetasRojas(SorteoPartidos.partidosD[i][0].getTarjetasRojas() + rojasA4);
+                    SorteoPartidos.partidosD[i][1].setTarjetasRojas(SorteoPartidos.partidosD[i][1].getTarjetasRojas() + rojasB4);
                     if (golesA4 > golesB4){
-                        sorteoPartidos.partidosD[i][0].setPuntos(sorteoPartidos.partidosD[i][0].getPuntos() + 3);
-                        sorteoPartidos.partidosD[i][0].setPartidosGanados(sorteoPartidos.partidosD[i][0].getPartidosGanados() + 1);
-                        sorteoPartidos.partidosD[i][1].setPartidosPerdidos(sorteoPartidos.partidosD[i][1].getPartidosPerdidos() + 1);
+                        SorteoPartidos.partidosD[i][0].setPuntos(SorteoPartidos.partidosD[i][0].getPuntos() + 3);
+                        SorteoPartidos.partidosD[i][0].setPartidosGanados(SorteoPartidos.partidosD[i][0].getPartidosGanados() + 1);
+                        SorteoPartidos.partidosD[i][1].setPartidosPerdidos(SorteoPartidos.partidosD[i][1].getPartidosPerdidos() + 1);
 
                     } else if (golesA4 == golesB4) {
-                        sorteoPartidos.partidosD[i][0].setPuntos(sorteoPartidos.partidosD[i][0].getPuntos() + 1);
-                        sorteoPartidos.partidosD[i][1].setPuntos(sorteoPartidos.partidosD[i][1].getPuntos() + 1);
-                        sorteoPartidos.partidosD[i][0].setPartidosEmpatados(sorteoPartidos.partidosD[i][0].getPartidosEmpatados() + 1);
-                        sorteoPartidos.partidosD[i][1].setPartidosEmpatados(sorteoPartidos.partidosD[i][1].getPartidosEmpatados() + 1);
+                        SorteoPartidos.partidosD[i][0].setPuntos(SorteoPartidos.partidosD[i][0].getPuntos() + 1);
+                        SorteoPartidos.partidosD[i][1].setPuntos(SorteoPartidos.partidosD[i][1].getPuntos() + 1);
+                        SorteoPartidos.partidosD[i][0].setPartidosEmpatados(SorteoPartidos.partidosD[i][0].getPartidosEmpatados() + 1);
+                        SorteoPartidos.partidosD[i][1].setPartidosEmpatados(SorteoPartidos.partidosD[i][1].getPartidosEmpatados() + 1);
                     } else {
-                        sorteoPartidos.partidosD[i][1].setPuntos(sorteoPartidos.partidosD[i][1].getPuntos() + 3);
-                        sorteoPartidos.partidosD[i][1].setPartidosGanados(sorteoPartidos.partidosD[i][1].getPartidosGanados() + 1);
-                        sorteoPartidos.partidosD[i][0].setPartidosPerdidos(sorteoPartidos.partidosD[i][0].getPartidosPerdidos() + 1);
+                        SorteoPartidos.partidosD[i][1].setPuntos(SorteoPartidos.partidosD[i][1].getPuntos() + 3);
+                        SorteoPartidos.partidosD[i][1].setPartidosGanados(SorteoPartidos.partidosD[i][1].getPartidosGanados() + 1);
+                        SorteoPartidos.partidosD[i][0].setPartidosPerdidos(SorteoPartidos.partidosD[i][0].getPartidosPerdidos() + 1);
+
                     }
 
             }

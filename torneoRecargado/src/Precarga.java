@@ -53,7 +53,6 @@ public class Precarga {
         arrayEquiposModalidad = new Equipos[modalidad];
         for (int i = 0; i < modalidad; i++) {
 
-            // System.arraycopy(arrayEquipos, i, arrayEquiposModalidad[i], i, 1);
             arrayEquiposModalidad[i] = arrayEquipos[i];
             arrayEquiposModalidad[i].setNombreEquipo(nombreEquipo[i]);
             arrayEquiposModalidad[i].setCapitan(
@@ -72,7 +71,9 @@ public class Precarga {
                 arrayEquiposModalidad[i].getJugadores2()[k].setDNI(generarNumeroAleatorio(10000000, 40000000));
             }
         }
+
         System.out.println("Pepito");
+
         // ins.setCantidadEquipos(ins.getCantidadEquipos());
         return arrayEquiposModalidad;
     }
