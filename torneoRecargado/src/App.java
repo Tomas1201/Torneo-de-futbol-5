@@ -68,6 +68,7 @@ public class App {
                     PartidosGrupos.partidGrup();
                     GanadorGrupo.obtenerEquipoGanador();
                     SegundoLugarGrupo.obtenerSegundoEquipo();
+                    TercerLugarGrupo.obtenerTerceroGrupo();
                     break;
                 case "5":
                     System.out.println("Proximamente");
