@@ -1,10 +1,14 @@
 public class Grupo {
+
+
     private Equipos[] equipo;
     private String nombreGrupo;
     private Equipos equipoGanador;
     private Equipos equipoSegundo;
+
     private Equipos equipoTercero;
     private Equipos equipoCuarto;
+
 
     public void setEquipo(Equipos[] equipo) {
         this.equipo = equipo;
@@ -31,6 +35,7 @@ public class Grupo {
         this.equipoSegundo = equipoSegundo;
     }
 
+
     public Equipos getEquipoTercero() {
         return equipoTercero;
     }
@@ -46,4 +51,5 @@ public class Grupo {
     public void setEquipoCuarto(Equipos equipoCuarto) {
         this.equipoCuarto = equipoCuarto;
     }
+
 }

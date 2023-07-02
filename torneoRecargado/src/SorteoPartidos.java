@@ -1,4 +1,5 @@
 public class SorteoPartidos {
+
 static Equipos[][] partidosA;
 static Equipos[][] partidosB;
 static Equipos[][] partidosC;
@@ -84,6 +85,7 @@ static Equipos[][] partidosD;
             partidosD[4][1] = SorteoGrupo.grupoD.getEquipo()[2];
             partidosD[5][0] = SorteoGrupo.grupoD.getEquipo()[1];
             partidosD[5][1] = SorteoGrupo.grupoD.getEquipo()[3];
+
         }
     }
 }

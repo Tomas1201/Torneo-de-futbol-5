@@ -1,12 +1,14 @@
 import java.util.Random;
 
 public class PartidosGrupos {
+
     static int [] arrayAmarillas = {3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 0, 4, 5,};
     static int [] arrayRojas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
 
     public static void partidGrup() {
         if (Inscripcion.getEquipos2().length == 8){
             for (int i = 0; i < SorteoPartidos.partidosA.length; i++) {
+
                 int golesA = generarNumeroAleatorio(0, 3);
                 int golesB = generarNumeroAleatorio(0, 3);
                 int decidirAmarillasA = generarNumeroAleatorio(0, 16);
@@ -17,6 +19,7 @@ public class PartidosGrupos {
                 int amarillasB = arrayAmarillas[decidirAmarillasB];
                 int rojasA = arrayRojas[decidirRojasA];
                 int rojasB = arrayRojas[decidirRojasB];
+
                 SorteoPartidos.partidosA[i][0].setGoles(SorteoPartidos.partidosA[i][0].getGoles() + golesA);
                 SorteoPartidos.partidosA[i][1].setGoles(SorteoPartidos.partidosA[i][1].getGoles() + golesB);
                 SorteoPartidos.partidosA[i][0].setTarjetasAmarillas(SorteoPartidos.partidosA[i][0].getTarjetasAmarillas() + amarillasA);
@@ -37,6 +40,7 @@ public class PartidosGrupos {
                     SorteoPartidos.partidosA[i][1].setPuntos(SorteoPartidos.partidosA[i][1].getPuntos() + 3);
                     SorteoPartidos.partidosA[i][1].setPartidosGanados(SorteoPartidos.partidosA[i][1].getPartidosGanados() + 1);
                     SorteoPartidos.partidosA[i][0].setPartidosPerdidos(SorteoPartidos.partidosA[i][0].getPartidosPerdidos() + 1);
+
                 }
                 int golesA2 = generarNumeroAleatorio(0, 3);
                 int golesB2 = generarNumeroAleatorio(0, 3);
@@ -48,6 +52,7 @@ public class PartidosGrupos {
                 int amarillasB2 = arrayAmarillas[decidirAmarillasB2];
                 int rojasA2 = arrayRojas[decidirRojasA2];
                 int rojasB2 = arrayRojas[decidirRojasB2];
+
                 SorteoPartidos.partidosB[i][0].setGoles(SorteoPartidos.partidosB[i][0].getGoles() + golesA2);
                 SorteoPartidos.partidosB[i][1].setGoles(SorteoPartidos.partidosB[i][1].getGoles() + golesB2);
                 SorteoPartidos.partidosB[i][0].setTarjetasAmarillas(SorteoPartidos.partidosB[i][0].getTarjetasAmarillas() + amarillasA2);
@@ -71,6 +76,7 @@ public class PartidosGrupos {
                 }
             }} else {
                 for (int i = 0; i < SorteoPartidos.partidosA.length; i++) {
+
                     int golesA = generarNumeroAleatorio(0, 3);
                     int golesB = generarNumeroAleatorio(0, 3);
                     int decidirAmarillasA = generarNumeroAleatorio(0, 16);
@@ -81,6 +87,7 @@ public class PartidosGrupos {
                     int amarillasB = arrayAmarillas[decidirAmarillasB];
                     int rojasA = arrayRojas[decidirRojasA];
                     int rojasB = arrayRojas[decidirRojasB];
+
                     SorteoPartidos.partidosA[i][0].setGoles(SorteoPartidos.partidosA[i][0].getGoles() + golesA);
                     SorteoPartidos.partidosA[i][1].setGoles(SorteoPartidos.partidosA[i][1].getGoles() + golesB);
                     SorteoPartidos.partidosA[i][0].setTarjetasAmarillas(SorteoPartidos.partidosA[i][0].getTarjetasAmarillas() + amarillasA);
@@ -101,6 +108,7 @@ public class PartidosGrupos {
                         SorteoPartidos.partidosA[i][1].setPuntos(SorteoPartidos.partidosA[i][1].getPuntos() + 3);
                         SorteoPartidos.partidosA[i][1].setPartidosGanados(SorteoPartidos.partidosA[i][1].getPartidosGanados() + 1);
                         SorteoPartidos.partidosA[i][0].setPartidosPerdidos(SorteoPartidos.partidosA[i][0].getPartidosPerdidos() + 1);
+
                     }
                     int golesA2 = generarNumeroAleatorio(0, 3);
                     int golesB2 = generarNumeroAleatorio(0, 3);
@@ -112,6 +120,7 @@ public class PartidosGrupos {
                     int amarillasB2 = arrayAmarillas[decidirAmarillasB2];
                     int rojasA2 = arrayRojas[decidirRojasA2];
                     int rojasB2 = arrayRojas[decidirRojasB2];
+
                     SorteoPartidos.partidosB[i][0].setGoles(SorteoPartidos.partidosB[i][0].getGoles() + golesA2);
                     SorteoPartidos.partidosB[i][1].setGoles(SorteoPartidos.partidosB[i][1].getGoles() + golesB2);
                     SorteoPartidos.partidosB[i][0].setTarjetasAmarillas(SorteoPartidos.partidosB[i][0].getTarjetasAmarillas() + amarillasA2);
@@ -132,6 +141,7 @@ public class PartidosGrupos {
                         SorteoPartidos.partidosB[i][1].setPuntos(SorteoPartidos.partidosB[i][1].getPuntos() + 3);
                         SorteoPartidos.partidosB[i][1].setPartidosGanados(SorteoPartidos.partidosB[i][1].getPartidosGanados() + 1);
                         SorteoPartidos.partidosB[i][0].setPartidosPerdidos(SorteoPartidos.partidosB[i][0].getPartidosPerdidos() + 1);
+
                     }
                     int golesA3 = generarNumeroAleatorio(0, 3);
                     int golesB3 = generarNumeroAleatorio(0, 3);
@@ -143,6 +153,7 @@ public class PartidosGrupos {
                     int amarillasB3 = arrayAmarillas[decidirAmarillasB3];
                     int rojasA3 = arrayRojas[decidirRojasA3];
                     int rojasB3 = arrayRojas[decidirRojasB3];
+
                     SorteoPartidos.partidosC[i][0].setGoles(SorteoPartidos.partidosC[i][0].getGoles() + golesA3);
                     SorteoPartidos.partidosC[i][1].setGoles(SorteoPartidos.partidosC[i][1].getGoles() + golesB3);
                     SorteoPartidos.partidosC[i][0].setTarjetasAmarillas(SorteoPartidos.partidosC[i][0].getTarjetasAmarillas() + amarillasA3);
@@ -163,6 +174,7 @@ public class PartidosGrupos {
                         SorteoPartidos.partidosC[i][1].setPuntos(SorteoPartidos.partidosC[i][1].getPuntos() + 3);
                         SorteoPartidos.partidosC[i][1].setPartidosGanados(SorteoPartidos.partidosC[i][1].getPartidosGanados() + 1);
                         SorteoPartidos.partidosC[i][0].setPartidosPerdidos(SorteoPartidos.partidosC[i][0].getPartidosPerdidos() + 1);
+
                     }
                     int golesA4 = generarNumeroAleatorio(0, 3);
                     int golesB4 = generarNumeroAleatorio(0, 3);
@@ -174,6 +186,7 @@ public class PartidosGrupos {
                     int amarillasB4 = arrayAmarillas[decidirAmarillasB4];
                     int rojasA4 = arrayRojas[decidirRojasA4];
                     int rojasB4 = arrayRojas[decidirRojasB4];
+
                     SorteoPartidos.partidosD[i][0].setGoles(SorteoPartidos.partidosD[i][0].getGoles() + golesA4);
                     SorteoPartidos.partidosD[i][1].setGoles(SorteoPartidos.partidosD[i][1].getGoles() + golesB4);
                     SorteoPartidos.partidosD[i][0].setTarjetasAmarillas(SorteoPartidos.partidosD[i][0].getTarjetasAmarillas() + amarillasA4);
@@ -194,6 +207,7 @@ public class PartidosGrupos {
                         SorteoPartidos.partidosD[i][1].setPuntos(SorteoPartidos.partidosD[i][1].getPuntos() + 3);
                         SorteoPartidos.partidosD[i][1].setPartidosGanados(SorteoPartidos.partidosD[i][1].getPartidosGanados() + 1);
                         SorteoPartidos.partidosD[i][0].setPartidosPerdidos(SorteoPartidos.partidosD[i][0].getPartidosPerdidos() + 1);
+
                     }
 
             }

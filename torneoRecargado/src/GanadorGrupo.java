@@ -1,5 +1,14 @@
 public class GanadorGrupo {
+
     public static void obtenerEquipoGanador() {
+
+     
+    SorteoGrupo sorteoGrupo = new SorteoGrupo();
+    Equipos equipos = new Equipos();
+    Inscripcion inscripcion = new Inscripcion();
+        
+    
+
         
         Equipos equipoGanadorA = null;
         int maxPuntosA = Integer.MIN_VALUE;
@@ -22,9 +31,11 @@ public class GanadorGrupo {
         int minAmarillasD = Integer.MIN_VALUE;
         int minRojasD = Integer.MIN_VALUE;
 
+
         if (Inscripcion.getEquipos2().length == 8){
 
             for (Equipos equipo : SorteoGrupo.grupoA.getEquipo()) {
+
                 int puntos = equipo.getPuntos();
                 int goles = equipo.getGoles();
                 int amarillas = equipo.getTarjetasAmarillas();
@@ -50,9 +61,11 @@ public class GanadorGrupo {
                     equipoGanadorA = equipo;
                 }
             }
+
             SorteoGrupo.grupoA.setEquipoGanador(equipoGanadorA);
 
             for (Equipos equipo : SorteoGrupo.grupoB.getEquipo()) {
+
                 int puntos = equipo.getPuntos();
                 int goles = equipo.getGoles();
                 int amarillas = equipo.getTarjetasAmarillas();
@@ -79,10 +92,12 @@ public class GanadorGrupo {
                 }
             }
             
+
             SorteoGrupo.grupoB.setEquipoGanador(equipoGanadorB);
         } else {
 
             for (Equipos equipo : SorteoGrupo.grupoA.getEquipo()) {
+
                 int puntos = equipo.getPuntos();
                 int goles = equipo.getGoles();
                 int amarillas = equipo.getTarjetasAmarillas();
@@ -108,9 +123,11 @@ public class GanadorGrupo {
                     equipoGanadorA = equipo;
                 }
             }
+
             SorteoGrupo.grupoA.setEquipoGanador(equipoGanadorA);
 
             for (Equipos equipo : SorteoGrupo.grupoB.getEquipo()) {
+
                 int puntos = equipo.getPuntos();
                 int goles = equipo.getGoles();
                 int amarillas = equipo.getTarjetasAmarillas();
@@ -137,9 +154,11 @@ public class GanadorGrupo {
                 }
             }
             
+
             SorteoGrupo.grupoB.setEquipoGanador(equipoGanadorB);
             
             for (Equipos equipo : SorteoGrupo.grupoC.getEquipo()) {
+
                 int puntos = equipo.getPuntos();
                 int goles = equipo.getGoles();
                 int amarillas = equipo.getTarjetasAmarillas();
@@ -166,9 +185,11 @@ public class GanadorGrupo {
                 }
             }
             
+
             SorteoGrupo.grupoC.setEquipoGanador(equipoGanadorC);
 
             for (Equipos equipo : SorteoGrupo.grupoD.getEquipo()) {
+
                 int puntos = equipo.getPuntos();
                 int goles = equipo.getGoles();
                 int amarillas = equipo.getTarjetasAmarillas();
@@ -195,7 +216,9 @@ public class GanadorGrupo {
                 }
             }
             
+
             SorteoGrupo.grupoD.setEquipoGanador(equipoGanadorD);
+
 
         }
     }

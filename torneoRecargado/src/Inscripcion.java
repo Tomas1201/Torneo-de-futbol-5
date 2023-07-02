@@ -17,7 +17,9 @@ public class Inscripcion {
   static boolean bru = true;
   static int iteracion;
   static boolean Minimo = true;
+
   private static byte Modalidad;
+
   static boolean decisionprecarga;
   static Precarga precarga = new Precarga();
   static boolean Modalidad1 = true;
@@ -25,7 +27,9 @@ public class Inscripcion {
   static boolean precargaDe = true;
   boolean Reglas1 = true;
 
+
   public static Equipos[] getEquipos2() {
+
     return equipos2;
   }
 
