@@ -252,6 +252,7 @@ public class TercerLugarGrupo {
                 SorteoGrupo.grupoD.setEquipoCuarto(equipoCuartoD);
 
             }
+            System.out.println("PEPE");
         }
     }
 }

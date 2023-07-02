@@ -42,7 +42,7 @@ public class Menus {
         }
         Thread.sleep(1000);
         System.out.println();
-        String texto2 = "\1Antes de comenzar con la inscripcion debe de conocer las reglas para poder inscribir a un equipo";
+        String texto2 = "Antes de comenzar con la inscripcion debe de conocer las reglas para poder inscribir a un equipo";
          for (int i = 0; i < texto2.length(); i++) {
         System.out.print(texto2.charAt(i));
         Thread.sleep(5);
