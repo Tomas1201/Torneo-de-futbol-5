@@ -5,7 +5,7 @@ public class App {
     // Instancias
     static Menus menu = new Menus();
     static Inscripcion ins = new Inscripcion();
-    static Equipos equi = new Equipos();
+   // static Equipos equi = new Equipos();
     static SorteoGrupo sorteo = new SorteoGrupo();
     // variables
     static boolean apagar = true;
