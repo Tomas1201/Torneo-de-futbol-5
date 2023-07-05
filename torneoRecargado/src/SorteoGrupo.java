@@ -5,7 +5,7 @@ public class SorteoGrupo {
     static Grupo grupoC;
     static Grupo grupoD;
 
-    public static void realizarSimulacion(){
+    public static void realizarSimulacion()throws Exception{
 
             if (Inscripcion.getEquipos2().length == 8) {
 
@@ -47,15 +47,7 @@ public class SorteoGrupo {
                 grupoD.setNombreGrupo("Grupo D");
 
                
-
-            }
-           
-        
-        }
-
-
-         public static void decirGrupos()throws Exception{
-             System.out.println("El grupo A esta conformado por " + grupoA.getEquipo()[0].getNombreEquipo() + ", " + grupoA.getEquipo()[1].getNombreEquipo() + ", " +  grupoA.getEquipo()[2].getNombreEquipo() + " y " +  grupoA.getEquipo()[3].getNombreEquipo());
+ System.out.println("El grupo A esta conformado por " + grupoA.getEquipo()[0].getNombreEquipo() + ", " + grupoA.getEquipo()[1].getNombreEquipo() + ", " +  grupoA.getEquipo()[2].getNombreEquipo() + " y " +  grupoA.getEquipo()[3].getNombreEquipo());
               Thread.sleep(1000);
                 System.out.println("El grupo B esta conformado por " + grupoB.getEquipo()[0].getNombreEquipo() + ", " + grupoB.getEquipo()[1].getNombreEquipo() + ", " +  grupoB.getEquipo()[2].getNombreEquipo() + " y " +  grupoB.getEquipo()[3].getNombreEquipo());
                   Thread.sleep(1000);
@@ -64,4 +56,10 @@ public class SorteoGrupo {
                 System.out.println("El grupo D esta conformado por " + grupoD.getEquipo()[0].getNombreEquipo() + ", " + grupoD.getEquipo()[1].getNombreEquipo() + ", " +  grupoD.getEquipo()[2].getNombreEquipo() + " y " +  grupoD.getEquipo()[3].getNombreEquipo());
                   Thread.sleep(1000);
             }
+           
+      
+        }
+
+
+        
 }

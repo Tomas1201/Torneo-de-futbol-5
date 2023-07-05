@@ -182,7 +182,7 @@ public class Inscripcion {
               }
             }
             // si la cantidad de jugadores esta entre 9 y 14 continua
-            if (equipos2[pepe].jugadores2.length <= 14 && equipos2[pepe].jugadores2.length >= 2) {
+            if (equipos2[pepe].jugadores2.length < 14 && equipos2[pepe].jugadores2.length > 9) {
               while (pi) {
                 System.out.println("Todos los los jugadores del equipo cuenta con Obra social? (si)(no)");
                 Respuesta = sc.nextLine();

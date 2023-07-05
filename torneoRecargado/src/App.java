@@ -84,7 +84,7 @@ public class App {
 
                             if(ins.getCantidadEquipos() == ins.getModalidad()){
                     SorteoGrupo.realizarSimulacion();
-                    SorteoGrupo.decirGrupos();
+                
                     SorteoPartidos.sorteParti();
                     PartidosGrupos.partidGrup();
                     GanadorGrupo.obtenerEquipoGanador();
