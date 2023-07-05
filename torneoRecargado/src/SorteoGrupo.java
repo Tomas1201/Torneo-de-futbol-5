@@ -19,6 +19,8 @@ public class SorteoGrupo {
                 grupoB.setEquipo(grupB);
 
                 grupoB.setNombreGrupo("Grupo B");
+                System.out.println("El grupo A esta conformado por " + grupoA.getEquipo()[0].getNombreEquipo() + ", " + grupoA.getEquipo()[1].getNombreEquipo() + ", " +  grupoA.getEquipo()[2].getNombreEquipo() + " y " +  grupoA.getEquipo()[3].getNombreEquipo());
+                System.out.println("El grupo B esta conformado por " + grupoB.getEquipo()[0].getNombreEquipo() + ", " + grupoB.getEquipo()[1].getNombreEquipo() + ", " +  grupoB.getEquipo()[2].getNombreEquipo() + " y " +  grupoB.getEquipo()[3].getNombreEquipo());
 
             } else {
                 grupoA = new Grupo();
@@ -43,6 +45,12 @@ public class SorteoGrupo {
                 grupoD.setEquipo(grupD);
 
                 grupoD.setNombreGrupo("Grupo D");
+                System.out.println("El grupo A esta conformado por " + grupoA.getEquipo()[0].getNombreEquipo() + ", " + grupoA.getEquipo()[1].getNombreEquipo() + ", " +  grupoA.getEquipo()[2].getNombreEquipo() + " y " +  grupoA.getEquipo()[3].getNombreEquipo());
+                System.out.println("El grupo B esta conformado por " + grupoB.getEquipo()[0].getNombreEquipo() + ", " + grupoB.getEquipo()[1].getNombreEquipo() + ", " +  grupoB.getEquipo()[2].getNombreEquipo() + " y " +  grupoB.getEquipo()[3].getNombreEquipo());
+                System.out.println("El grupo C esta conformado por " + grupoC.getEquipo()[0].getNombreEquipo() + ", " + grupoC.getEquipo()[1].getNombreEquipo() + ", " +  grupoC.getEquipo()[2].getNombreEquipo() + " y " +  grupoC.getEquipo()[3].getNombreEquipo());
+                System.out.println("El grupo D esta conformado por " + grupoD.getEquipo()[0].getNombreEquipo() + ", " + grupoD.getEquipo()[1].getNombreEquipo() + ", " +  grupoD.getEquipo()[2].getNombreEquipo() + " y " +  grupoD.getEquipo()[3].getNombreEquipo());
+
+
             }
         }
 }
