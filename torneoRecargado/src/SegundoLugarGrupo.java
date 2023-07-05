@@ -62,6 +62,8 @@
             }
 
             SorteoGrupo.grupoA.setEquipoSegundo(equipoSegundoA);
+            System.out.println("El segundo del grupo A es " + equipoSegundoA.getNombreEquipo() + ", con " + equipoSegundoA.getPuntos() + " puntos, " + equipoSegundoA.getGoles() + " goles, " + equipoSegundoA.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoA.getTarjetasRojas() + " tarjetas rojas!");
+
 
             for (Equipos equipo : SorteoGrupo.grupoB.getEquipo()) {
 
@@ -99,6 +101,8 @@
             
 
             SorteoGrupo.grupoB.setEquipoSegundo(equipoSegundoB);
+            System.out.println("El segundo del grupo B es " + equipoSegundoB.getNombreEquipo() + ", con " + equipoSegundoB.getPuntos() + " puntos, " + equipoSegundoB.getGoles() + " goles, " + equipoSegundoB.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoB.getTarjetasRojas() + " tarjetas rojas!");
+
         } else {
 
             for (Equipos equipo : SorteoGrupo.grupoA.getEquipo()) {
@@ -136,6 +140,7 @@
             }
 
             SorteoGrupo.grupoA.setEquipoSegundo(equipoSegundoA);
+            System.out.println("El segundo del grupo A es " + equipoSegundoA.getNombreEquipo() + ", con " + equipoSegundoA.getPuntos() + " puntos, " + equipoSegundoA.getGoles() + " goles, " + equipoSegundoA.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoA.getTarjetasRojas() + " tarjetas rojas!");
 
             for (Equipos equipo : SorteoGrupo.grupoB.getEquipo()) {
 
@@ -173,7 +178,8 @@
             
 
             SorteoGrupo.grupoB.setEquipoSegundo(equipoSegundoB);
-            
+            System.out.println("El segundo del grupo B es " + equipoSegundoB.getNombreEquipo() + ", con " + equipoSegundoB.getPuntos() + " puntos, " + equipoSegundoB.getGoles() + " goles, " + equipoSegundoB.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoB.getTarjetasRojas() + " tarjetas rojas!");
+
             for (Equipos equipo : SorteoGrupo.grupoC.getEquipo()) {
 
                 int puntos = equipo.getPuntos();
@@ -210,6 +216,7 @@
             
 
             SorteoGrupo.grupoC.setEquipoSegundo(equipoSegundoC);
+            System.out.println("El segundo del grupo C es " + equipoSegundoC.getNombreEquipo() + ", con " + equipoSegundoC.getPuntos() + " puntos, " + equipoSegundoC.getGoles() + " goles, " + equipoSegundoC.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoC.getTarjetasRojas() + " tarjetas rojas!");
 
             for (Equipos equipo : SorteoGrupo.grupoD.getEquipo()) {
 
@@ -247,7 +254,7 @@
             
 
             SorteoGrupo.grupoD.setEquipoSegundo(equipoSegundoD);
-
+            System.out.println("El segundo del grupo D es " + equipoSegundoD.getNombreEquipo() + ", con " + equipoSegundoD.getPuntos() + " puntos, " + equipoSegundoD.getGoles() + " goles, " + equipoSegundoD.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoD.getTarjetasRojas() + " tarjetas rojas!");
 
         }
     }

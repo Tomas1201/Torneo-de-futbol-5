@@ -81,7 +81,8 @@ public class App {
                     GanadorGrupo.obtenerEquipoGanador();
                     SegundoLugarGrupo.obtenerSegundoEquipo();
                     TercerLugarGrupo.obtenerTerceroGrupo();
-
+                    SorteoCuartos.sorteCuartos();
+                    PartidosCuartos.partidCuartos();
                   
 
 
