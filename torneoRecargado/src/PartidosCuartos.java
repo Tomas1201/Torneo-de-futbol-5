@@ -9,7 +9,7 @@ public class PartidosCuartos {
     static Equipos ganadorCuartos3 = null;
     static Equipos ganadorCuartos4 = null;
 
-    public static void partidCuartos() {
+    public static void partidCuartos() throws Exception{
 
         if (Inscripcion.getEquipos2().length == 8) {
 
@@ -28,6 +28,7 @@ public class PartidosCuartos {
 
                 if (i == 0) {
                     System.out.println("La siguiente semifinal se disputará entre " + SorteoCuartos.semis[0][0].getNombreEquipo() + " y " + SorteoCuartos.semis[0][1].getNombreEquipo());
+                     Thread.sleep(1000);
                     if (golesA > golesB) {
                         System.out.println("¡" + SorteoCuartos.semis[0][0].getNombreEquipo() + " ha ganado por " + golesA + " a " + golesB + " contra " + SorteoCuartos.semis[0][1].getNombreEquipo() + "!");
                         ganadorSemis1 = SorteoCuartos.semis[0][0];
@@ -137,6 +138,7 @@ public class PartidosCuartos {
 
                 } else if (i == 2) {
                     System.out.println("La final se disputará entre " + ganadorSemis1.getNombreEquipo() + " y " + ganadorSemis2.getNombreEquipo());
+                     Thread.sleep(1000);
                     if (golesA > golesB) {
                         System.out.println("¡" + ganadorSemis1.getNombreEquipo() + " ha ganado por " + golesA + " a " + golesB + " contra " + ganadorSemis2.getNombreEquipo() + " y es el campeón del torneo!");
                     } else if (golesA == golesB && arrayBool[booleano] == true && numero == 0) {
@@ -183,6 +185,7 @@ public class PartidosCuartos {
                         }
                     } else if (golesA < golesB) {
                         System.out.println("¡" + ganadorSemis2.getNombreEquipo() + " ha ganado por " + golesB + " a " + golesA + " contra " + ganadorSemis1.getNombreEquipo() + " y es el campeón del torneo!");
+                         Thread.sleep(1000);
                     }
                 }
             }
@@ -201,6 +204,7 @@ public class PartidosCuartos {
 
                 if (i == 0) {
                     System.out.println("Los siguientes cuartos de final se disputarán entre " + SorteoCuartos.cuartos[0][0].getNombreEquipo() + " y " + SorteoCuartos.cuartos[0][1].getNombreEquipo());
+                     Thread.sleep(1000);
                     if (golesA > golesB) {
                         System.out.println("¡" + SorteoCuartos.cuartos[0][0].getNombreEquipo() + " ha ganado por " + golesA + " a " + golesB + " contra " + SorteoCuartos.cuartos[0][1].getNombreEquipo() + "!");
                         ganadorCuartos1 = SorteoCuartos.cuartos[0][0];
@@ -251,6 +255,7 @@ public class PartidosCuartos {
                         }
                     } else if (golesA < golesB) {
                         System.out.println("¡" + SorteoCuartos.cuartos[0][1].getNombreEquipo() + " ha ganado por " + golesB + " a " + golesA + " contra " + SorteoCuartos.cuartos[0][0].getNombreEquipo() + "!");
+                         Thread.sleep(1000);
                         ganadorCuartos1 = SorteoCuartos.cuartos[0][1];
                     }
                 } else if (i == 1) {
@@ -310,6 +315,7 @@ public class PartidosCuartos {
 
                 } else if (i == 2) {
                     System.out.println("Los siguientes cuartos de final se disputarán entre " + SorteoCuartos.cuartos[2][0].getNombreEquipo() + " y " + SorteoCuartos.cuartos[2][1].getNombreEquipo());
+                     Thread.sleep(1000);
                     if (golesA > golesB) {
                         System.out.println("¡" + SorteoCuartos.cuartos[2][0].getNombreEquipo() + " ha ganado por " + golesA + " a " + golesB + " contra " + SorteoCuartos.cuartos[2][1].getNombreEquipo() + "!");
                         ganadorCuartos3 = SorteoCuartos.cuartos[2][0];
@@ -365,6 +371,7 @@ public class PartidosCuartos {
 
                 } else if (i == 3){
                     System.out.println("Los siguientes cuartos de final se disputarán entre " + SorteoCuartos.cuartos[3][0].getNombreEquipo() + " y " + SorteoCuartos.cuartos[3][1].getNombreEquipo());
+                     Thread.sleep(1000);
                     if (golesA > golesB) {
                         System.out.println("¡" + SorteoCuartos.cuartos[3][0].getNombreEquipo() + " ha ganado por " + golesA + " a " + golesB + " contra " + SorteoCuartos.cuartos[3][1].getNombreEquipo() + "!");
                         ganadorCuartos4 = SorteoCuartos.cuartos[3][0];
@@ -420,6 +427,7 @@ public class PartidosCuartos {
 
                 } else if (i == 4) {
                     System.out.println("La siguiente semifinal se disputará entre " + ganadorCuartos1.getNombreEquipo() + " y " + ganadorCuartos2.getNombreEquipo());
+                     Thread.sleep(1000);
                     if (golesA > golesB) {
                         System.out.println("¡" + ganadorCuartos1.getNombreEquipo() + " ha ganado por " + golesA + " a " + golesB + " contra " + ganadorCuartos2.getNombreEquipo() + "!");
                         ganadorSemis1 = ganadorCuartos1;
@@ -477,6 +485,7 @@ public class PartidosCuartos {
                     }
                 } else if (i == 5){
                     System.out.println("La siguiente semifinal se disputará entre " + ganadorCuartos3.getNombreEquipo() + " y " + ganadorCuartos4.getNombreEquipo());
+                     Thread.sleep(1000);
                     if (golesA > golesB) {
                         System.out.println("¡" + ganadorCuartos3.getNombreEquipo() + " ha ganado por " + golesA + " a " + golesB + " contra " + ganadorCuartos4.getNombreEquipo() + "!");
                         ganadorSemis2 = ganadorCuartos3;
@@ -534,6 +543,7 @@ public class PartidosCuartos {
                     }
                 } else if (i == 6){
                     System.out.println("La final se disputará entre " + ganadorSemis1.getNombreEquipo() + " y " + ganadorSemis2.getNombreEquipo());
+                     Thread.sleep(1000);
                     if (golesA > golesB) {
                         System.out.println("¡" + ganadorSemis1.getNombreEquipo() + " ha ganado por " + golesA + " a " + golesB + " contra " + ganadorSemis2.getNombreEquipo() + " y es el campeón del torneo!");
                     } else if (golesA == golesB && arrayBool[booleano] == true && numero == 0) {

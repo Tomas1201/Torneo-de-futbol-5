@@ -13,9 +13,9 @@ public class Menus {
 
     public void cartelera() throws Exception {
         System.out.println();
-        System.out.println("                                                                       \u001b[31m╔══════════════════════════════════════════════════╗");
-        System.out.println("                                                                       ║      Bienvenidos al torneo del multiverso!!      ║");
-        System.out.println("                                                                       ╚══════════════════════════════════════════════════╝\u001b[0m");
+        System.out.println("                                             \u001b[31m╔══════════════════════════════════════════════════╗");
+        System.out.println("                                             ║      Bienvenidos al torneo del multiverso!!      ║");
+        System.out.println("                                             ╚══════════════════════════════════════════════════╝\u001b[0m");
         System.out.println();
         System.out.println();
     }
@@ -25,7 +25,7 @@ public class Menus {
         // String texto = "Inscribir equipo(1) | Ver Fixture(2) | Ver Planillas de
         // equipos(3) | Inicio de torneo(4) \n| Resultados de partidos(5) | Apuestas?(6)
         // | Informacion del torneo(7) | Salir(0)";
-        String texto = "\u001b[36m      \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n      \u2551 Inscribir equipo(1) \u2551 Ver Fixture(2) \u2551 Ver Planillas de equipos(3) \u2551 Inicio de torneo(4) \u2551 Resultados de partidos(5) \u2551 Apuestas?(6) \u2551 Informacion del torneo(7) \u2551 Salir(0) \u2551\n      \u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D\u001b[0m";
+        String texto = "\u001b[36m      \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2566\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n      \u2551 Inscribir equipo(1) \u2551 Ver Fixture(2) \u2551 Ver Planillas de equipos(3) \u2551 Inicio de torneo(4) \u2551 Salir(0) \u2551\n      \u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2569\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D\u001b[0m";
         for (int i = 0; i < texto.length(); i++) {
             System.out.print(texto.charAt(i));
             Thread.sleep(1);
@@ -176,4 +176,48 @@ public class Menus {
     System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║                                                                                                                                                           ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
     System.out.println("╚═════════╩═══════╩════════╝                                                                                                                                                           ╚═════════╩═══════╩════════╝");          
 }
+
+
+    public static void barra() {
+        showProgressBar("Partido en curso", 5000);
+        System.out.println("Partido completado");
+    }
+
+    public static void showProgressBar(String message, long duration) {
+        System.out.print(message + ": ");
+
+        long startTime = System.currentTimeMillis();
+        long elapsedTime = 0;
+
+        while (elapsedTime < duration) {
+            elapsedTime = System.currentTimeMillis() - startTime;
+            int progress = (int) (elapsedTime * 100 / duration);
+
+            System.out.print("[");
+            for (int i = 0; i < 50; i++) {
+                if (i < progress / 2) {
+                    System.out.print("=");
+                } else if (i == progress / 2) {
+                    System.out.print(">");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("] " + progress + "%");
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.print("\r");
+        }
+
+        System.out.println();
+    }
 }
+
+
+
+

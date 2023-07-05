@@ -1,6 +1,6 @@
  public class SegundoLugarGrupo {
 
-   public static void obtenerSegundoEquipo() {
+   public static void obtenerSegundoEquipo()throws Exception {
 
         
         Equipos equipoSegundoA = null;
@@ -63,7 +63,7 @@
 
             SorteoGrupo.grupoA.setEquipoSegundo(equipoSegundoA);
             System.out.println("El segundo del grupo A es " + equipoSegundoA.getNombreEquipo() + ", con " + equipoSegundoA.getPuntos() + " puntos, " + equipoSegundoA.getGoles() + " goles, " + equipoSegundoA.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoA.getTarjetasRojas() + " tarjetas rojas!");
-
+             Thread.sleep(1000);
 
             for (Equipos equipo : SorteoGrupo.grupoB.getEquipo()) {
 
@@ -102,7 +102,7 @@
 
             SorteoGrupo.grupoB.setEquipoSegundo(equipoSegundoB);
             System.out.println("El segundo del grupo B es " + equipoSegundoB.getNombreEquipo() + ", con " + equipoSegundoB.getPuntos() + " puntos, " + equipoSegundoB.getGoles() + " goles, " + equipoSegundoB.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoB.getTarjetasRojas() + " tarjetas rojas!");
-
+             Thread.sleep(1000);
         } else {
 
             for (Equipos equipo : SorteoGrupo.grupoA.getEquipo()) {
@@ -141,7 +141,7 @@
 
             SorteoGrupo.grupoA.setEquipoSegundo(equipoSegundoA);
             System.out.println("El segundo del grupo A es " + equipoSegundoA.getNombreEquipo() + ", con " + equipoSegundoA.getPuntos() + " puntos, " + equipoSegundoA.getGoles() + " goles, " + equipoSegundoA.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoA.getTarjetasRojas() + " tarjetas rojas!");
-
+             Thread.sleep(1000);
             for (Equipos equipo : SorteoGrupo.grupoB.getEquipo()) {
 
                 int puntos = equipo.getPuntos();
@@ -179,7 +179,7 @@
 
             SorteoGrupo.grupoB.setEquipoSegundo(equipoSegundoB);
             System.out.println("El segundo del grupo B es " + equipoSegundoB.getNombreEquipo() + ", con " + equipoSegundoB.getPuntos() + " puntos, " + equipoSegundoB.getGoles() + " goles, " + equipoSegundoB.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoB.getTarjetasRojas() + " tarjetas rojas!");
-
+             Thread.sleep(1000);
             for (Equipos equipo : SorteoGrupo.grupoC.getEquipo()) {
 
                 int puntos = equipo.getPuntos();
@@ -217,7 +217,7 @@
 
             SorteoGrupo.grupoC.setEquipoSegundo(equipoSegundoC);
             System.out.println("El segundo del grupo C es " + equipoSegundoC.getNombreEquipo() + ", con " + equipoSegundoC.getPuntos() + " puntos, " + equipoSegundoC.getGoles() + " goles, " + equipoSegundoC.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoC.getTarjetasRojas() + " tarjetas rojas!");
-
+             Thread.sleep(1000);
             for (Equipos equipo : SorteoGrupo.grupoD.getEquipo()) {
 
                 int puntos = equipo.getPuntos();
@@ -255,7 +255,7 @@
 
             SorteoGrupo.grupoD.setEquipoSegundo(equipoSegundoD);
             System.out.println("El segundo del grupo D es " + equipoSegundoD.getNombreEquipo() + ", con " + equipoSegundoD.getPuntos() + " puntos, " + equipoSegundoD.getGoles() + " goles, " + equipoSegundoD.getTarjetasAmarillas() + " tarjetas amarillas y " + equipoSegundoD.getTarjetasRojas() + " tarjetas rojas!");
-
+             Thread.sleep(1000);
         }
     }
 }

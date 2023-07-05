@@ -5,7 +5,7 @@ public class PartidosGrupos {
     static int [] arrayAmarillas = {3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 0, 4, 5,};
     static int [] arrayRojas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
 
-    public static void partidGrup() {
+    public static void partidGrup() throws Exception{
         if (Inscripcion.getEquipos2().length == 8){
             for (int i = 0; i < SorteoPartidos.partidosA.length; i++) {
 
@@ -21,7 +21,7 @@ public class PartidosGrupos {
                 int rojasB = arrayRojas[decidirRojasB];
 
                 System.out.println("El siguiente partido del grupo A se disputará entre " +SorteoPartidos.partidosA[i][0].getNombreEquipo() + " y " + SorteoPartidos.partidosA[i][1].getNombreEquipo());
-
+                  Thread.sleep(1000);
                 SorteoPartidos.partidosA[i][0].setGoles(SorteoPartidos.partidosA[i][0].getGoles() + golesA);
                 SorteoPartidos.partidosA[i][1].setGoles(SorteoPartidos.partidosA[i][1].getGoles() + golesB);
                 SorteoPartidos.partidosA[i][0].setTarjetasAmarillas(SorteoPartidos.partidosA[i][0].getTarjetasAmarillas() + amarillasA);
@@ -59,7 +59,7 @@ public class PartidosGrupos {
                 int rojasB2 = arrayRojas[decidirRojasB2];
 
                 System.out.println("El siguiente partido del grupo B se disputará entre " + SorteoPartidos.partidosB[i][0].getNombreEquipo() + " y " + SorteoPartidos.partidosB[i][1].getNombreEquipo());
-
+                     Thread.sleep(1000);
                 SorteoPartidos.partidosB[i][0].setGoles(SorteoPartidos.partidosB[i][0].getGoles() + golesA2);
                 SorteoPartidos.partidosB[i][1].setGoles(SorteoPartidos.partidosB[i][1].getGoles() + golesB2);
                 SorteoPartidos.partidosB[i][0].setTarjetasAmarillas(SorteoPartidos.partidosB[i][0].getTarjetasAmarillas() + amarillasA2);
@@ -102,7 +102,7 @@ public class PartidosGrupos {
                     int rojasB = arrayRojas[decidirRojasB];
 
                     System.out.println("El siguiente partido del grupo A se disputará entre " +SorteoPartidos.partidosA[i][0].getNombreEquipo() + " y " + SorteoPartidos.partidosA[i][1].getNombreEquipo());
-
+                     Thread.sleep(1000);
                     SorteoPartidos.partidosA[i][0].setGoles(SorteoPartidos.partidosA[i][0].getGoles() + golesA);
                     SorteoPartidos.partidosA[i][1].setGoles(SorteoPartidos.partidosA[i][1].getGoles() + golesB);
                     SorteoPartidos.partidosA[i][0].setTarjetasAmarillas(SorteoPartidos.partidosA[i][0].getTarjetasAmarillas() + amarillasA);
@@ -140,7 +140,7 @@ public class PartidosGrupos {
                     int rojasB2 = arrayRojas[decidirRojasB2];
 
                     System.out.println("El siguiente partido del grupo B se disputará entre " +SorteoPartidos.partidosB[i][0].getNombreEquipo() + " y " + SorteoPartidos.partidosB[i][1].getNombreEquipo());
-
+                     Thread.sleep(1000);
                     SorteoPartidos.partidosB[i][0].setGoles(SorteoPartidos.partidosB[i][0].getGoles() + golesA2);
                     SorteoPartidos.partidosB[i][1].setGoles(SorteoPartidos.partidosB[i][1].getGoles() + golesB2);
                     SorteoPartidos.partidosB[i][0].setTarjetasAmarillas(SorteoPartidos.partidosB[i][0].getTarjetasAmarillas() + amarillasA2);
@@ -178,7 +178,7 @@ public class PartidosGrupos {
                     int rojasB3 = arrayRojas[decidirRojasB3];
 
                     System.out.println("El siguiente partido del grupo C se disputará entre " +SorteoPartidos.partidosC[i][0].getNombreEquipo() + " y " + SorteoPartidos.partidosC[i][1].getNombreEquipo());
-
+                     Thread.sleep(1000);
                     SorteoPartidos.partidosC[i][0].setGoles(SorteoPartidos.partidosC[i][0].getGoles() + golesA3);
                     SorteoPartidos.partidosC[i][1].setGoles(SorteoPartidos.partidosC[i][1].getGoles() + golesB3);
                     SorteoPartidos.partidosC[i][0].setTarjetasAmarillas(SorteoPartidos.partidosC[i][0].getTarjetasAmarillas() + amarillasA3);
@@ -216,7 +216,7 @@ public class PartidosGrupos {
                     int rojasB4 = arrayRojas[decidirRojasB4];
 
                     System.out.println("El siguiente partido del grupo D se disputará entre " +SorteoPartidos.partidosD[i][0].getNombreEquipo() + " y " + SorteoPartidos.partidosD[i][1].getNombreEquipo());
-
+                     Thread.sleep(1000);
                     SorteoPartidos.partidosD[i][0].setGoles(SorteoPartidos.partidosD[i][0].getGoles() + golesA4);
                     SorteoPartidos.partidosD[i][1].setGoles(SorteoPartidos.partidosD[i][1].getGoles() + golesB4);
                     SorteoPartidos.partidosD[i][0].setTarjetasAmarillas(SorteoPartidos.partidosD[i][0].getTarjetasAmarillas() + amarillasA4);

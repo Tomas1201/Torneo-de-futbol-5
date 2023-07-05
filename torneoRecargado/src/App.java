@@ -75,7 +75,16 @@ public class App {
                     break;
                 case "4":
 
+                if (ins.getEquipos2() == null) {
+                        System.out.println("No hay equipos inscriptos actualmente");
+                    } else {
+                        if (ins.getCantidadEquipos() == 0) {
+                            System.out.println("No hay equipos inscriptos actualmete");
+                        } else {
+
+                            if(ins.getCantidadEquipos() == ins.getModalidad()){
                     SorteoGrupo.realizarSimulacion();
+                    SorteoGrupo.decirGrupos();
                     SorteoPartidos.sorteParti();
                     PartidosGrupos.partidGrup();
                     GanadorGrupo.obtenerEquipoGanador();
@@ -83,17 +92,18 @@ public class App {
                     TercerLugarGrupo.obtenerTerceroGrupo();
                     SorteoCuartos.sorteCuartos();
                     PartidosCuartos.partidCuartos();
+                            }
+                            else{
+                            System.out.println("Todos los equipos deben estar inscriptos para poder iniciar el torneo");
+                            System.out.println("Cantidad de Equipos: "+ins.getCantidadEquipos()+"/"+ins.getModalidad());;
+                        }
+                        }
+                    }
                   
 
 
                     break;
                 case "5":
-                    System.out.println("Proximamente");
-                    break;
-                case "6":
-                    System.out.println("Proximamente");
-                    break;
-                case "7":
                     System.out.println("Proximamente");
                     break;
                 case "0":
@@ -106,4 +116,4 @@ public class App {
         sc.close();
 
     }
-}
+        }

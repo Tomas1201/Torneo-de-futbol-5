@@ -1,5 +1,5 @@
 public class TercerLugarGrupo {
-    public static void obtenerTerceroGrupo() {
+    public static void obtenerTerceroGrupo() throws Exception{
         {
             Equipos equipoTerceroA = null;
             Equipos equipoCuartoA = null;
@@ -252,7 +252,7 @@ public class TercerLugarGrupo {
                 SorteoGrupo.grupoD.setEquipoCuarto(equipoCuartoD);
 
             }
-            System.out.println("PEPE");
+            
         }
     }
 }
