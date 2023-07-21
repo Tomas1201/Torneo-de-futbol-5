@@ -1,8 +1,11 @@
 # Torneo-de-futbol-5
 Proyecto de Algoritmo
-Materia: Algoritmo y estructura de datos
 
-Integrantes del Grupo:
+## Materia :
+
+*Algoritmo y estructura de datos*
+
+## Integrantes del Grupo:
 
 - Di Carlo, Franco
 
@@ -16,7 +19,4 @@ Integrantes del Grupo:
 
 - Mateljan, Mirko
 
->[!Example]- Objetivos
->Inscripcion de jugadores
->Simulacion de resultados
->Visualizacion de resultados
+
