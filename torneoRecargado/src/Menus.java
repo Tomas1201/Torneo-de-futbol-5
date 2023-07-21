@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class Menus {
     Scanner sc = new Scanner(System.in);
     Jugadores juga = new Jugadores();
@@ -106,7 +106,7 @@ public class Menus {
                 pep[i] = sb.toString();
             }
         }
-
+Arrays.sort(pep);
     int g=0;
     int pu=0;
     
@@ -142,7 +142,21 @@ public class Menus {
 }
 
      public void fix16(){  
-
+  juan = ins.getEquipos2();
+        pep =new String[ juan.length];
+        for (int i = 0; i < juan.length; i++) {
+            String equipo = juan[i].getNombreEquipo();
+            if (equipo.length() >= 7) {
+                pep[i] = equipo.substring(0, 7);
+            } else {
+                StringBuilder sb = new StringBuilder(equipo);
+                while (sb.length() < 7) {
+                    sb.append(" ");
+                }
+                pep[i] = sb.toString();
+            }
+        }
+Arrays.sort(pep);
       int g=0;
       int pu=0;
     System.out.println("");
@@ -152,28 +166,28 @@ public class Menus {
     System.out.println("                                        ╔═════════╦═══════╗                                \u001b[33m╔═══════════════════════════╗\u001b[0m                              ╔═════════╦═══════╗                                          ");
     System.out.println("╔══════════════════════════╗            ║ Equipos ║ Goles ║                                \u001b[33m║          CAMPEON          ║\u001b[0m                              ║ Equipos ║ Goles ║              ╔══════════════════════════╗");
     System.out.println("║         Grupo  A         ║            ╚═════════╩═══════╝                                \u001b[33m╠═══════════════════════════╣\u001b[0m                              ╚═════════╩═══════╝              ║         Grupo  C         ║");
-    System.out.println(  "╠═════════╦═══════╦════════╣                                                               \u001b[33m║       "   +pep+   "       ║\u001b[0m                                                               ╠═════════╦═══════╦════════╣");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╔═════════╦═══════╗                                \u001b[33m╚═══════════════════════════╝\u001b[0m                              ╔═════════╦═══════╗              ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
-    System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep+" ║ "+g+" ║                                                                                           ║ "+pep+" ║ "+g+" ║              ╠═════════╬═══════╬════════╣");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╠═════════╬═══════╣                                                                                           ╠═════════╬═══════╣              ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
-    System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep+" ║ "+g+" ║                                     ╔═════════════════╗                                   ║ "+pep+" ║ "+g+" ║              ╠═════════╬═══════╬════════╣");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╚═════════╩═══════╝                                     ║      FINAL      ║                                   ╚═════════╩═══════╝              ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
+    System.out.println(  "╠═════════╦═══════╦════════╣                                                               \u001b[33m║       "   +pep[1]+   "       ║\u001b[0m                                                               ╠═════════╦═══════╦════════╣");
+    System.out.println(  "║ "+pep[0]+" ║ "+g+" ║ "+pu+" ║            ╔═════════╦═══════╗                                \u001b[33m╚═══════════════════════════╝\u001b[0m                              ╔═════════╦═══════╗              ║ "+pep[9]+" ║ "+g+" ║ "+pu+" ║");
+    System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep[1]+" ║ "+g+" ║                                                                                           ║ "+pep[9]+" ║ "+g+" ║              ╠═════════╬═══════╬════════╣");
+    System.out.println(  "║ "+pep[1]+" ║ "+g+" ║ "+pu+" ║            ╠═════════╬═══════╣                                                                                           ╠═════════╬═══════╣              ║ "+pep[9]+" ║ "+g+" ║ "+pu+" ║");
+    System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep[4]+" ║ "+g+" ║                                     ╔═════════════════╗                                   ║ "+pep[10]+" ║ "+g+" ║              ╠═════════╬═══════╬════════╣");
+    System.out.println(  "║ "+pep[2]+" ║ "+g+" ║ "+pu+" ║            ╚═════════╩═══════╝                                     ║      FINAL      ║                                   ╚═════════╩═══════╝              ║ "+pep[10]+" ║ "+g+" ║ "+pu+" ║");
     System.out.println("╠═════════╬═══════╬════════╣                                                                    ╠═════════╦═══════╣                                                                    ╠═════════╬═══════╬════════╣");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║                                                                    ║ "+pep+" ║ "+g+" ║                                                                    ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
+    System.out.println(  "║ "+pep[4]+" ║ "+g+" ║ "+pu+" ║                                                                    ║ "+pep[1]+" ║ "+g+" ║                                                                    ║ "+pep[11]+" ║ "+g+" ║ "+pu+" ║");
     System.out.println("╚═════════╩═══════╩════════╝                                   ╔═════════╦═══════╗              ╠═════════╬═══════╣            ╔═════════╦═══════╗                                     ╚═════════╩═══════╩════════╝");
-    System.out.println(  "                                                               ║ "+pep+" ║ "+g+" ║              ║ "+pep+" ║ "+g+" ║            ║ "+pep+" ║ "+g+" ║                                                                 ");
+    System.out.println(  "                                                               ║ "+pep[1]+" ║ "+g+" ║              ║ "+pep[9]+" ║ "+g+" ║            ║ "+pep[15]+" ║ "+g+" ║                                                                 ");
     System.out.println("                                                               ╠═════════╬═══════╣              ╚═════════╩═══════╝            ╠═════════╬═══════╣                                                                 ");
-    System.out.println(  "                                                               ║ "+pep+" ║ "+g+" ║                                             ║ "+pep+" ║ "+g+" ║                                                                 ");
+    System.out.println(  "                                                               ║ "+pep[7]+" ║ "+g+" ║                                             ║ "+pep[9]+" ║ "+g+" ║                                                                 ");
     System.out.println("╔══════════════════════════╗                                   ╚═════════╩═══════╝              ╔═════════════════╗            ╚═════════╩═══════╝                                     ╔══════════════════════════╗");
     System.out.println("║         Grupo  B         ║                                                                    ║  Tercer Puesto  ║                                                                    ║         Grupo  D         ║");
     System.out.println("╠═════════╦═══════╦════════╣                                                                    ╠═════════╦═══════╣                                                                    ╠═════════╦═══════╦════════╣");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╔═════════╦═══════╗                                     ║ "+pep+" ║ "+g+" ║                                  ╔═════════╦═══════╗               ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
-    System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep+" ║ "+g+" ║                                     ╠═════════╬═══════╣                                  ║ "+pep+" ║ "+g+" ║               ╠═════════╬═══════╬════════╣");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╠═════════╬═══════╣                                     ║ "+pep+" ║ "+g+" ║                                  ╠═════════╬═══════╣               ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
-    System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep+" ║ "+g+" ║                                     ╚═════════╩═══════╝                                  ║ "+pep+" ║ "+g+" ║               ╠═════════╬═══════╬════════╣");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║            ╚═════════╩═══════╝                                                                                          ╚═════════╩═══════╝               ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
+    System.out.println(  "║ "+pep[5]+" ║ "+g+" ║ "+pu+" ║            ╔═════════╦═══════╗                                     ║ "+pep[7]+" ║ "+g+" ║                                  ╔═════════╦═══════╗               ║ "+pep[12]+" ║ "+g+" ║ "+pu+" ║");
+    System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep[7]+" ║ "+g+" ║                                     ╠═════════╬═══════╣                                  ║ "+pep[15]+" ║ "+g+" ║               ╠═════════╬═══════╬════════╣");
+    System.out.println(  "║ "+pep[6]+" ║ "+g+" ║ "+pu+" ║            ╠═════════╬═══════╣                                     ║ "+pep[15]+" ║ "+g+" ║                                  ╠═════════╬═══════╣               ║ "+pep[13]+" ║ "+g+" ║ "+pu+" ║");
+    System.out.println(  "╠═════════╬═══════╬════════╣            ║ "+pep[8]+" ║ "+g+" ║                                     ╚═════════╩═══════╝                                  ║ "+pep[13]+" ║ "+g+" ║               ╠═════════╬═══════╬════════╣");
+    System.out.println(  "║ "+pep[7]+" ║ "+g+" ║ "+pu+" ║            ╚═════════╩═══════╝                                                                                          ╚═════════╩═══════╝               ║ "+pep[14]+" ║ "+g+" ║ "+pu+" ║");
     System.out.println("╠═════════╬═══════╬════════╣                                                                                                                                                           ╠═════════╬═══════╬════════╣");
-    System.out.println(  "║ "+pep+" ║ "+g+" ║ "+pu+" ║                                                                                                                                                           ║ "+pep+" ║ "+g+" ║ "+pu+" ║");
+    System.out.println(  "║ "+pep[8]+" ║ "+g+" ║ "+pu+" ║                                                                                                                                                           ║ "+pep[15]+" ║ "+g+" ║ "+pu+" ║");
     System.out.println("╚═════════╩═══════╩════════╝                                                                                                                                                           ╚═════════╩═══════╩════════╝");          
 }
 

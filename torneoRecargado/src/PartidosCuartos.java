@@ -8,7 +8,7 @@ public class PartidosCuartos {
     static Equipos ganadorCuartos2 = null;
     static Equipos ganadorCuartos3 = null;
     static Equipos ganadorCuartos4 = null;
-
+    static Boolean finTorneo = false;
     public static void partidCuartos() throws Exception{
 
         if (Inscripcion.getEquipos2().length == 8) {
@@ -595,7 +595,7 @@ public class PartidosCuartos {
             } //corchete de for i=7
 
         } //corchete del else del if equipos==8
-
+finTorneo = true;
     } // corchete método
 
     public static int generarNumeroAleatorio(int min, int max) {

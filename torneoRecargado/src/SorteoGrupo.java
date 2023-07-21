@@ -6,7 +6,7 @@ public class SorteoGrupo {
     static Grupo grupoD;
 
     public static void realizarSimulacion()throws Exception{
-
+System.out.println("A continuacion se realizara el sorteo de grupos");
             if (Inscripcion.getEquipos2().length == 8) {
 
                 Equipos[] grupA = {Inscripcion.getEquipos2()[0], Inscripcion.getEquipos2()[1], Inscripcion.getEquipos2()[2], Inscripcion.getEquipos2()[3]};

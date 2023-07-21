@@ -6,6 +6,7 @@ public class PartidosGrupos {
     static int [] arrayRojas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
 
     public static void partidGrup() throws Exception{
+        System.out.println("A continuacion se disputaran los partidos de la fase clasificatoria");
         if (Inscripcion.getEquipos2().length == 8){
             for (int i = 0; i < SorteoPartidos.partidosA.length; i++) {
 

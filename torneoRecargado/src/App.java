@@ -27,34 +27,34 @@ public class App {
                     ins.InscripEquipo();
                     break;
                 case "2":
-                    System.out.println("Proximamente");
+                    // System.out.println("Proximamente");
 
 
                     //incompleto(No se puede mostrar por falta de terminar)
 
-                    // if (ins.getEquipos2() == null) {
-                    //     System.out.println("No hay equipos inscriptos actualmente");
-                    // } else {
-                    //     if (ins.getCantidadEquipos() == 0) {
-                    //         System.out.println("No hay equipos inscriptos actualmete");
-                    //     } else {
+                    if (ins.getEquipos2() == null) {
+                        System.out.println("No hay equipos inscriptos actualmente");
+                    } else {
+                        if (ins.getCantidadEquipos() == 0) {
+                            System.out.println("No hay equipos inscriptos actualmete");
+                        } else {
 
-                    //         if(ins.getCantidadEquipos() == ins.getModalidad()){
+                            if(ins.getCantidadEquipos() == ins.getModalidad()){
 
-                    //         if (ins.getModalidad() == 8) {
-                    //             menu.fixture();
-                    //         } else {
-                    //             menu.fix16();
-                    //         }
-                    //     }
+                            if (ins.getModalidad() == 8) {
+                                menu.fixture();
+                            } else {
+                                menu.fix16();
+                            }
+                        }
 
-                    //     else{
-                    //         System.out.println("Todos los equipos deben estar inscriptos para poder mostrar el fixture");
-                    //         System.out.println("Cantidad de Equipos: "+ins.getCantidadEquipos()+"/"+ins.getModalidad());;
-                    //     }
-                    //     }
+                        else{
+                            System.out.println("Todos los equipos deben estar inscriptos para poder mostrar el fixture");
+                            System.out.println("Cantidad de Equipos: "+ins.getCantidadEquipos()+"/"+ins.getModalidad());;
+                        }
+                        }
 
-                    // }
+                    }
                     break;
                 case "3":
 
@@ -78,7 +78,9 @@ public class App {
                     }
                     break;
                 case "4":
-
+if(PartidosCuartos.finTorneo){
+    System.out.println("El torneo a finalizado, muchas gracias por participar");
+}else{
                 if (ins.getEquipos2() == null) {
                         System.out.println("No hay equipos inscriptos actualmente");
                     } else {
@@ -88,7 +90,6 @@ public class App {
 
                             if(ins.getCantidadEquipos() == ins.getModalidad()){
                     SorteoGrupo.realizarSimulacion();
-                
                     SorteoPartidos.sorteParti();
                     PartidosGrupos.partidGrup();
                     GanadorGrupo.obtenerEquipoGanador();
@@ -104,7 +105,7 @@ public class App {
                         }
                     }
                   
-
+                }
 
                     break;
                 case "5":
