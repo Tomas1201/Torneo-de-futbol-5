@@ -15,3 +15,8 @@ Integrantes del Grupo:
 - Lucchetta, Nahuel
 
 - Mateljan, Mirko
+
+>[!Example] - Objetivos
+>Inscripcion de jugadores
+>Simulacion de resultados
+>Visualizacion de resultados
