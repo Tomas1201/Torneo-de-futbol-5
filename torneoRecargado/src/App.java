@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class App {
     // Instancias
     static Menus menu = new Menus();
@@ -21,10 +21,14 @@ public class App {
 
             switch (opcion) {
                 case "1":
+                if(PartidosCuartos.finTorneo){
+    System.out.println("El torneo a finalizado, muchas gracias por participar");
+}else{
                     if (ins.Reglas1) {
                         menu.reglas();
                     }
                     ins.InscripEquipo();
+                }
                     break;
                 case "2":
                     // System.out.println("Proximamente");

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class Equipos {
     private int CantidadJugadores;
     private String Capitan;
@@ -215,6 +215,7 @@ public class Equipos {
 
     // Imprime los nombres de los jugadores
     public void Decirnombre() {
+        // Arrays.sort(jugadores2);
         for (int i = 0; i < jugadores2.length; i++) {
 
             System.out.println("El nombre del jugador es: " + jugadores2[i].getNombrejugador());
@@ -223,20 +224,19 @@ public class Equipos {
     }
 
      public void plantilla() {
-
+        // Arrays.sort(jugadores2);
         System.out.println("╔═════════╦═══════╦════════╗");
         System.out.println("║ Equipos ║ Goles ║ Puntos ║");
         System.out.println("╚═════════╩═══════╩════════╝");
-        System.out.println("                                        ╔═════════╦═══════╗");
-        System.out.println("╔══════════════════════════╗            ║ Equipos ║ Goles ║");
-        System.out.println("║         Grupo  A         ║            ╚═════════╩═══════╝");
-        System.out.println("╠═════════╦═══════╦════════╣");
+        System.out.println("                                        ");
+        System.out.println("╔══════════════════════════╗            ");
+        System.out.println("║    Lista de Jugadores    ║            ");
+        System.out.println("╠══════════════════════════╣");
 
         for (int i = 0; i < jugadores2.length; i++) {
-            System.out.println("║  " + jugadores2[i].getNombrejugador() + ""
-                    + "            ╔═════════╦═══════╗");
+            System.out.println("║  " + jugadores2[i].getNombrejugador()+"  ║");
         }
-        System.out.println("╚═════════╩═══════╩════════╝ ");
+        System.out.println("╚══════════════════════════╝ ");
 
     }
 }
