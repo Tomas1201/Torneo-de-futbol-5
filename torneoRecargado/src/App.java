@@ -108,12 +108,8 @@ if(PartidosCuartos.finTorneo){
                         }
                         }
                     }
-                  
                 }
 
-                    break;
-                case "5":
-                    System.out.println("Proximamente");
                     break;
                 case "0":
                     apagar = false;
