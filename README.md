@@ -16,7 +16,7 @@ Integrantes del Grupo:
 
 - Mateljan, Mirko
 
->[!Example] - Objetivos
+>[!Example]- Objetivos
 >Inscripcion de jugadores
 >Simulacion de resultados
 >Visualizacion de resultados
