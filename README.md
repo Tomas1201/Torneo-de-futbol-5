@@ -4,14 +4,14 @@ Materia: Algoritmo y estructura de datos
 
 Integrantes del Grupo:
 
-*Di Carlo, Franco
+- Di Carlo, Franco
 
-*Acosta, Tomas
+- Acosta, Tomas
 
-*Gonzalez, Thomas
+- Gonzalez, Thomas
 
-*Gaido, Josefina
+- Gaido, Josefina
 
-*Lucchetta, Nahuel
+- Lucchetta, Nahuel
 
-*Mateljan, Mirko
+- Mateljan, Mirko
