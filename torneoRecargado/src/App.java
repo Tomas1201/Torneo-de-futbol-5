@@ -1,15 +1,23 @@
 
 import java.util.Scanner;
+import javax.sound.sampled.*;
+
+import java.io.File;
 import java.util.Arrays;
 public class App {
     // Instancias
     static Menus menu = new Menus();
     static Inscripcion ins = new Inscripcion();
     static SorteoGrupo sorteo = new SorteoGrupo();
+
+
     // variables
     static boolean apagar = true;
 
     public static void main(String[] args) throws Exception {
+         AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("AudioFinal.wav"));
+         Clip clip = AudioSystem.getClip();
+         clip.open(audioInputStream);
         String opcion;
         Scanner sc = new Scanner(System.in);
 
@@ -101,6 +109,9 @@ if(PartidosCuartos.finTorneo){
                     TercerLugarGrupo.obtenerTerceroGrupo();
                     SorteoCuartos.sorteCuartos();
                     PartidosCuartos.partidCuartos();
+                    clip.start();
+                    clip.drain();
+
                             }
                             else{
                             System.out.println("Todos los equipos deben estar inscriptos para poder iniciar el torneo");
